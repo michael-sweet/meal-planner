@@ -1,3 +1,3 @@
 ## Meal Planner
 
-![](storage/app/screenshot1.png?raw=true)
+![](storage/screenshots/screenshot1.png?raw=true)
