@@ -1,0 +1,30 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Theme
+@import 'themes/blue_theme';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Fontawesome
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+@import 'card_meal';
+
+body {
+    background-color: $body-bg;
+}
+
+
+.navbar {
+    border-bottom: 1px solid $nav-border-color;
+    background-color: $nav-background-color;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: $nav-item-color;
+}

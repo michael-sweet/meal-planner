@@ -1,0 +1,34 @@
+.card-meal-container {
+    gap: 20px;
+}
+
+.card-meal {
+    max-width: 300px;
+    flex-basis: 100%;
+    box-shadow: $card-shaddow;
+
+    &__img-wrap {
+        height: 150px;
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        position: absolute;
+        top: -80%;
+    }
+
+    &__body {
+        background-color: $card-meal-bg;
+        border-radius: 0 0 5px 5px;
+        padding: 10px;
+        font-size: 21px;
+        color: $card-meal-color;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
