@@ -15,9 +15,26 @@
 @import 'card_meal';
 
 body {
-    background-color: $body-bg;
+    background-color: unset;
 }
 
+html {
+    position: relative;
+    background-color: $almost-white;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.33;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
 
 .navbar {
     border-bottom: 1px solid $nav-border-color;
@@ -27,4 +44,10 @@ body {
 .nav-link {
     font-size: 18px;
     color: $nav-item-color;
+}
+
+.container__main {
+    background-color: $almost-white;
+    border-radius: 5px;
+    padding: 30px;
 }

@@ -31,46 +31,63 @@ class Meals extends Controller
         $meal = Meal::findOrNew($id);
 
         return view('edit_meal', [
-            'meal' => $meal,
-            'meal_ingredients' => $meal->mealIngredients->load('ingredient')
+            'meal' => $meal
         ]);
     }
 
     public function editMealAction($id, Request $request)
     {
-
         $meal = Meal::findOrNew($id);
-        $meal->name = $request->name;
-        if ($request->file('image')) {
-            $meal->image_path = $request->file('image')->storePublicly('meal_images', 'public');
+
+        switch ($request->submitted) {
+            case 'edit_meal':
+                $meal->name = $request->name;
+                if ($request->file('image')) {
+                    $meal->image_path = $request->file('image')->storePublicly('meal_images', 'public');
+                }
+                $meal->save();
+                return redirect()->route('view_meal', $meal->id);
         }
-        $meal->save();
 
         return back();
     }
 
-    public function editMealIngredient($meal_id, $id)
+    public function editMealIngredients($id)
     {
-        return view('edit_meal_ingredient', [
-            'meal' => Meal::findOrFail($meal_id),
-            'meal_ingredient' => MealIngredient::findOrNew($id),
+        $meal = Meal::findOrNew($id);
+
+        return view('edit_meal_ingredients', [
+            'meal' => $meal,
+            'meal_ingredients' => $meal->mealIngredients->load('ingredient'),
             'ingredients' => Ingredient::all()
         ]);
     }
 
-    public function editMealIngredientAction($meal_id, $id, Request $request)
+    public function editMealIngredientsAction($id, Request $request)
     {
-        $meal = Meal::findOrFail($meal_id);
-        $ingredient = Ingredient::findOrFail($request->ingredient);
+        $meal = Meal::findOrNew($id);
 
-        $meal_ingredient = MealIngredient::findOrNew($id);
-        $meal_ingredient->amount = $request->amount;
-        $meal_ingredient->save();
+        switch ($request->submitted) {
+                case 'add_ingredient':
+                    $ingredient = Ingredient::findOrFail($request->ingredient);
 
-        $meal->mealIngredients()->save($meal_ingredient);
-        $ingredient->mealIngredients()->save($meal_ingredient);
+                    $meal_ingredient = new MealIngredient();
+                    $meal_ingredient->amount = $request->amount;
+                    $meal_ingredient->save();
 
-        return back();
+                    $meal->mealIngredients()->save($meal_ingredient);
+                    $ingredient->mealIngredients()->save($meal_ingredient);
+
+                    return redirect()->route('edit_meal_ingredients', $meal->id);
+
+                case 'save_amounts':
+                    $meal_ingredients = MealIngredient::findOrFail(array_keys($request->meal_ingredients));
+                    foreach ($meal_ingredients as $meal_ingredient) {
+                        $meal_ingredient->amount = $request->meal_ingredients[$meal_ingredient->id];
+                        $meal_ingredient->save();
+                    }
+                    return redirect()->route('view_meal', $meal->id);
+        }
     }
 
     public function randomSelection()

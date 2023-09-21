@@ -23,8 +23,8 @@ Route::get('/meals/', [Meals::class, 'viewMeals'])->name('view_meals');
 Route::get('/view_meal/{id}/', [Meals::class, 'viewMeal'])->name('view_meal');
 Route::get('/edit_meal/{id}/', [Meals::class, 'editMeal'])->name('edit_meal');
 Route::post('/edit_meal/{id}/', [Meals::class, 'editMealAction']);
-Route::get('/edit_meal_ingredient/{meal_id}/{id}/', [Meals::class, 'editMealIngredient'])->name('edit_meal_ingredient');
-Route::post('/edit_meal_ingredient/{meal_id}/{id}/', [Meals::class, 'editMealIngredientAction']);
+Route::get('/edit_meal_ingredients/{id}/', [Meals::class, 'editMealIngredients'])->name('edit_meal_ingredients');
+Route::post('/edit_meal_ingredients/{id}/', [Meals::class, 'editMealIngredientsAction']);
 
 Route::get('/ingredients/', [Ingredients::class, 'viewIngredients'])->name('view_ingredients');
 Route::get('/edit_ingredient/{id}/', [Ingredients::class, 'editIndredient'])->name('edit_ingredient');

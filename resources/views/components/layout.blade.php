@@ -3,6 +3,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="/css/app.css" rel="stylesheet">
+        <style>
+            html::before {
+                background-image: url('{{ $bgimg ?? '' }}');
+            }
+        </style>
     </head>
     <body>
         <div class="navbar navbar-expand-lg mb-5">
@@ -17,9 +22,9 @@
                 </ul>
             </div>
         </div>
-        <div class="container">
+        <div class="container container__main" id="app">
             {{ $slot }}
         </div>
     </body>
-    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
 </html>
