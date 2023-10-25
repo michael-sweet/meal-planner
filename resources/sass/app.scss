@@ -13,6 +13,7 @@
 @import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 
 @import 'card_meal';
+@import 'calendar_overrides';
 
 body {
     background-color: unset;
@@ -50,4 +51,17 @@ html {
     background-color: $almost-white;
     border-radius: 5px;
     padding: 30px;
+}
+
+.selection {
+
+    &:hover {
+        background-color: $gray-300;
+    }
+
+    &__img-container {
+        max-width: 150px;
+        max-height: 150px;
+        overflow: hidden;
+    }
 }

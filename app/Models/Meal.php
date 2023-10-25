@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Meal extends Model
 {
@@ -15,17 +16,22 @@ class Meal extends Model
         return $this->hasMany(MealIngredient::class);
     }
 
+    public function mealSelections()
+    {
+        return $this->hasMany(MealSelection::class);
+    }
+
     public function ingredients()
     {
         return $this->belongsToMany(Ingredient::class, 'meal_ingredients');
     }
 
-    public static function getRandomWeek()
+    public static function getUserMeals(User $user = null)
     {
-        $meals = self::all();
-        $now = now();
-        srand($now->format('W') * $now->format('Y'));
-        return $meals->random(min(7, $meals->count()))->load('mealIngredients.ingredient');
+        if (!$user) {
+            $user = Auth::user();
+        }
+        return Meal::where(['user_id' => $user->id])->with('ingredients')->get();
     }
 
     public static function collateIngredients($meals)
@@ -33,10 +39,10 @@ class Meal extends Model
         $ingredients = [];
         foreach ($meals as $meal) {
             foreach ($meal->mealIngredients as $meal_ingredient) {
-                if (!isset($ingredients[$meal_ingredient->ingredient->name])) {
-                    $ingredients[$meal_ingredient->ingredient->name] = 0;
+                if (!isset($ingredients[$meal_ingredient->ingredient->id])) {
+                    $ingredients[$meal_ingredient->ingredient->id] = 0;
                 }
-                $ingredients[$meal_ingredient->ingredient->name] += $meal_ingredient->amount;
+                $ingredients[$meal_ingredient->ingredient->id] += $meal_ingredient->amount;
             }
         }
 

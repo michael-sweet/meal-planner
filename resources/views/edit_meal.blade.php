@@ -16,7 +16,9 @@
             </form>
         </div>
         <div class="col-12 col-lg-6">
-            <img src="{{ asset('storage/' . $meal->image_path) }}" class="img-fluid mt-3" />
+            @isset($meal->image_path)
+                <img src="{{ asset('storage/' . $meal->image_path) }}" class="img-fluid mt-3" />
+            @endisset
         </div>
     </div>
 </x-meal_layout>

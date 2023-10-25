@@ -16,7 +16,8 @@ class AddMealSelectionTable extends Migration
     {
         Schema::create('meal_selections', function (Blueprint $table) {
             $table->id();
-            $table->timestamp('date');
+            $table->integer('year');
+            $table->integer('week');
             $table->foreignIdFor(Meal::class)->default(0);
         });
     }

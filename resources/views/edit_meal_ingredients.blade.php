@@ -23,7 +23,7 @@
                                 value="{{ $meal_ingredient->amount }}"
                                 class="form-control" />
                         </td>
-                        <td>{{ $meal_ingredient->ingredient->amount_type }}</td>
+                        <td>{{ $meal_ingredient->ingredient->unit }}</td>
                     </tr>
                 @endforeach
             </tbody>
