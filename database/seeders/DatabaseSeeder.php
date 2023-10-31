@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()->create();
+        User::factory()->test()->create();
         $this->call([
             MealSeeder::class
         ]);

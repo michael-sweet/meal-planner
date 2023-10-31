@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Demos;
 use App\Http\Controllers\Meals;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Ingredients;
 use Illuminate\Support\Facades\Route;
@@ -17,12 +19,18 @@ use App\Http\Controllers\MealSelections;
 |
 */
 
-Auth::routes([
-    'register' => false,
-    'reset' => false,
-    'verify' => false,
-    'confirm' => false
-]);
+if (App::environment('demo')) {
+    Route::get('/login/', [Demos::class, 'login'])->name('login');
+    Route::post('/login/', [Demos::class, 'loginAction']);
+    Route::post('/logout/', [Demos::class, 'logoutAction'])->name('logout');
+} else {
+    Auth::routes([
+        'register' => false,
+        'reset' => false,
+        'verify' => false,
+        'confirm' => false
+    ]);
+}
 
 Route::middleware(['auth'])->group(function () {
 
