@@ -31,6 +31,7 @@ class Meal extends Model
         if (!$user) {
             $user = Auth::user();
         }
+
         return Meal::where(['user_id' => $user->id])->with('ingredients')->get();
     }
 

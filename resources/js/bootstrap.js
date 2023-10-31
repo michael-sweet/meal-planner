@@ -1,6 +1,8 @@
-window._ = require('lodash');
+import $ from 'jquery';
+window.$ = $;
+window.jQuery = $;
 
-global.$ = global.jQuery = require('jquery');
+window._ = require('lodash');
 
 try {
     require('bootstrap');

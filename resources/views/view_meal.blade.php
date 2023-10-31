@@ -6,13 +6,11 @@
             <img src="{{ asset('storage/' . $meal->image_path) }}" class="img-fluid mt-3" />
         </div>
         <div class="col-12 col-lg-6">
-            <h2>Ingredients</h2>
-            <a href="{{ url('edit_meal_ingredients', [$meal->id]) }}" class="btn btn-primary my-3"><i class="fa-solid fa-pen-to-square"></i> Edit amounts</a>
             <a href="{{ url('add_meal_ingredient', [$meal->id]) }}" class="btn btn-primary my-3"><i class="fa-solid fa-plus"></i> Add ingredient</a>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Ingredient</th>
                         <th>Amount</th>
                     </tr>
                 </thead>
@@ -25,6 +23,7 @@
                     @endforeach
                 </tbody>
             </table>
+            <a href="{{ url('edit_meal_ingredients', [$meal->id]) }}" class="btn btn-secondary my-3"><i class="fa-solid fa-pen-to-square"></i> Edit amounts</a>
         </div>
     </div>
 </x-meal_layout>

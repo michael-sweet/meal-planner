@@ -16,6 +16,9 @@ if (calendarEl) {
             center: 'title',
             right: 'editMealSelections'
         },
+        eventClick: (info) => {
+            window.location.href = window.Laravel.routes.viewMeal.replace(':selected_meal_id', info.event.extendedProps.meal_selection_id);
+        },
         listDayFormat: false,
         listDaySideFormat: false,
         height: 'auto',
@@ -30,6 +33,11 @@ if (calendarEl) {
     });
     calendar.render();
 
+    if (window.calendar.calendar_start) {
+        calendar.gotoDate(window.calendar.calendar_start);
+        console.log(window.calendar.calendar_start)
+    }
+
     let getCurrentYear = () => {
         return calendar.formatDate(calendar.view.currentStart, { year: 'numeric' });
     }
@@ -41,5 +49,4 @@ if (calendarEl) {
         window.location.href = window.Laravel.routes.viewCollatedIngredients.replace(':year', getCurrentYear()).replace(':week', getCurrentWeek());
         return false;
     })
-
 }

@@ -19,4 +19,9 @@ class Ingredient extends Model
     {
         return $this->belongsToMany(Meal::class, 'meal_ingredients');
     }
+
+    public function mealSelections()
+    {
+        return $this->hasManyThrough(MealSelection::class, Meal::class);
+    }
 }

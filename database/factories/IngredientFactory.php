@@ -13,8 +13,11 @@ class IngredientFactory extends Factory
      */
     public function definition()
     {
+        $units = ['g', 'ml', 'teaspoons', 'tablespoons', 'cups', null];
+
         return [
-            'name' => $this->faker->words(3, true)
+            'name' => $this->faker->words(3, true),
+            'unit' => $units[array_rand($units)]
         ];
     }
 }

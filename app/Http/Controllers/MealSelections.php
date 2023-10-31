@@ -10,18 +10,38 @@ use Illuminate\Support\Facades\Auth;
 
 class MealSelections extends Controller
 {
-    public function calendar()
+    public function calendar(int $year = null, int $week = null)
     {
         $events = [];
         foreach (MealSelection::userSelections() as $selection) {
             $events[] = [
                 'title' => $selection->meal->name,
-                'start' => Carbon::create($selection->year)->setISODate($selection->year, $selection->week)->toDateString()
+                'start' => Carbon::create($selection->year)->setISODate($selection->year, $selection->week)->toDateString(),
+                'meal' => $selection->meal->toArray(),
+                'meal_selection_id' => $selection->id,
+                'meal_ingredients' => $selection->meal->mealIngredients->load('ingredient')->toArray()
             ];
         }
 
+        $calendar_start = '';
+        if ($year && $week) {
+            $calendar_start = Carbon::create($year)->setISODate($year, $week)->toDateString();
+        }
+
         return view('calendar', [
-            'events' => $events
+            'events' => $events,
+            'calendar_start' => $calendar_start
+        ]);
+    }
+
+    public function viewSelectedMeal(int $selected_meal_id)
+    {
+        $meal_selection = MealSelection::findOrFail($selected_meal_id);
+
+        return view('view_selected_meal', [
+            'meal' => $meal_selection->meal,
+            'meal_selection' => $meal_selection,
+            'meal_ingredients' => $meal_selection->meal->mealIngredients->load('ingredient')
         ]);
     }
 
@@ -57,7 +77,9 @@ class MealSelections extends Controller
         $collated_ingredients = Meal::collateIngredients($week_selections->pluck('meal'));
         return view('view_collated_ingredients', [
             'ingredients' => $ingredients,
-            'totals' => $collated_ingredients
+            'totals' => $collated_ingredients,
+            'year' => $year,
+            'week' => $week
         ]);
     }
 }

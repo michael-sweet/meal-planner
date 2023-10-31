@@ -23,7 +23,7 @@ class MealSelection extends Model
             $user = Auth::user();
         }
 
-        return self::where(['user_id' => $user->id])->with('meal')->get();
+        return self::where(['user_id' => $user->id])->with(['meal.ingredients'])->get();
     }
 
     public static function userWeekSelections(int $year, int $week, User $user = null)

@@ -26,10 +26,12 @@ Auth::routes([
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/', [MealSelections::class, 'calendar'])->name('calendar');
+    Route::get('/', [MealSelections::class, 'calendar']);
+    Route::get('/calendar/{year?}/{week?}', [MealSelections::class, 'calendar'])->name('calendar');
     Route::get('/edit_selections/{year}/{week}/', [MealSelections::class, 'editSelections'])->name('edit_selections');
     Route::post('/edit_selections/{year}/{week}/', [MealSelections::class, 'editSelectionsAction']);
     Route::get('/view_collated_ingredients/{year}/{week}/', [MealSelections::class, 'viewCollatedIngredients'])->name('view_collated_ingredients');
+    Route::get('/view_selected_meal/{selected_meal_id}/', [MealSelections::class, 'viewSelectedMeal'])->name('view_selected_meal');
 
     Route::get('/meals', [Meals::class, 'viewMeals'])->name('view_meals');
     Route::get('/view_meal/{id}/', [Meals::class, 'viewMeal'])->name('view_meal');
