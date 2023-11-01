@@ -15,20 +15,20 @@ class Ingredients extends Controller
         ]);
     }
 
-    public function editIndredient($id)
+    public function editIngredient($id)
     {
         return view('edit_ingredient', [
             'ingredient' => Ingredient::findOrNew($id)
         ]);
     }
 
-    public function editIndredientAction($id, Request $request)
+    public function editIngredientAction($id, Request $request)
     {
         $ingredient = Ingredient::findOrNew($id);
         $ingredient->name = $request->name;
         $ingredient->unit = $request->unit;
         $ingredient->save();
 
-        return redirect()->route('view_ingredients')->with('success', 'Ingredient saved!');
+        return redirect()->route('ingredients')->with('success', 'Ingredient saved!');
     }
 }

@@ -2,11 +2,11 @@
     <div class="row">
         <div class="col-12 col-lg-6">
             <h1>{{ $meal->name }}</h1>
-            <a href="{{ url('edit_meal', [$meal->id]) }}" class="btn btn-primary my-3"><i class="fa-solid fa-pen-to-square"></i> Edit Details</a>
+            <a href="{{ route('meals.edit', [$meal->id]) }}" class="btn btn-primary my-3"><i class="fa-solid fa-pen-to-square"></i> Edit Details</a>
             <img src="{{ asset('storage/' . $meal->image_path) }}" class="img-fluid mt-3" />
         </div>
         <div class="col-12 col-lg-6">
-            <a href="{{ url('add_meal_ingredient', [$meal->id]) }}" class="btn btn-primary my-3"><i class="fa-solid fa-plus"></i> Add ingredient</a>
+            <a href="{{ route('meals.ingredients.add', [$meal->id]) }}" class="btn btn-primary my-3"><i class="fa-solid fa-plus"></i> Add ingredient</a>
             <table class="table">
                 <thead>
                     <tr>
@@ -23,7 +23,7 @@
                     @endforeach
                 </tbody>
             </table>
-            <a href="{{ url('edit_meal_ingredients', [$meal->id]) }}" class="btn btn-secondary my-3"><i class="fa-solid fa-pen-to-square"></i> Edit amounts</a>
+            <a href="{{ route('meals.ingredients.edit', [$meal->id]) }}" class="btn btn-secondary my-3"><i class="fa-solid fa-pen-to-square"></i> Edit amounts</a>
         </div>
     </div>
 </x-meal_layout>

@@ -32,12 +32,11 @@ class Demos extends Controller
                                 $meal->MealIngredients()->save($meal_ingredient);
                                 $ingredients->random()->mealIngredients()->save($meal_ingredient);
                             });
-
                     }
                 }
                 Auth::login($user);
 
-                return redirect()->route('calendar')->with('success', 'Welcome, ' . $user->name . '!');
+                return redirect()->route('selections.calendar')->with('success', 'Welcome, ' . $user->name . '!');
         }
     }
 

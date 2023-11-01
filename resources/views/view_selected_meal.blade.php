@@ -1,5 +1,5 @@
 <x-meal_layout :meal="$meal">
-    <a href="{{ route('calendar', [$meal_selection->year, $meal_selection->week]) }}" class="btn btn-primary mb-3">Back to calendar</a>
+    <a href="{{ route('selections.calendar', [$meal_selection->year, $meal_selection->week]) }}" class="btn btn-primary mb-3">Back to calendar</a>
     <div class="row">
         <div class="col-12 col-lg-6">
             <h1>{{ $meal->name }}</h1>

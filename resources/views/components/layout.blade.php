@@ -14,13 +14,13 @@
             <div class="collapse navbar-collapse">
                 <ul class="container navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('calendar') }}">Calendar</a>
+                        <a class="nav-link" href="{{ route('selections.calendar') }}">Calendar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('view_meals') }}">Meals</a>
+                        <a class="nav-link" href="{{ route('meals') }}">Meals</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('view_ingredients') }}">Ingredients</a>
+                        <a class="nav-link" href="{{ route('ingredients') }}">Ingredients</a>
                     </li>
                     <li class="nav-item dropdown ms-auto">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

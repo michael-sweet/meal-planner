@@ -20,9 +20,9 @@ use App\Http\Controllers\MealSelections;
 */
 
 if (App::environment('demo')) {
-    Route::get('/login/', [Demos::class, 'login'])->name('login');
-    Route::post('/login/', [Demos::class, 'loginAction']);
-    Route::post('/logout/', [Demos::class, 'logoutAction'])->name('logout');
+    Route::get('/login', [Demos::class, 'login'])->name('login');
+    Route::post('/login', [Demos::class, 'loginAction']);
+    Route::post('/logout', [Demos::class, 'logoutAction'])->name('logout');
 } else {
     Auth::routes([
         'register' => false,
@@ -35,23 +35,23 @@ if (App::environment('demo')) {
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/', [MealSelections::class, 'calendar']);
-    Route::get('/calendar/{year?}/{week?}', [MealSelections::class, 'calendar'])->name('calendar');
-    Route::get('/edit_selections/{year}/{week}/', [MealSelections::class, 'editSelections'])->name('edit_selections');
-    Route::post('/edit_selections/{year}/{week}/', [MealSelections::class, 'editSelectionsAction']);
-    Route::get('/view_collated_ingredients/{year}/{week}/', [MealSelections::class, 'viewCollatedIngredients'])->name('view_collated_ingredients');
-    Route::get('/view_selected_meal/{selected_meal_id}/', [MealSelections::class, 'viewSelectedMeal'])->name('view_selected_meal');
+    Route::get('/selections/calendar/{year?}/{week?}', [MealSelections::class, 'calendar'])->name('selections.calendar');
+    Route::get('/selections/edit/{year}/{week}', [MealSelections::class, 'editSelections'])->name('selections.edit');
+    Route::post('/selections/edit/{year}/{week}', [MealSelections::class, 'editSelectionsAction']);
+    Route::get('/selections/view_ingredients/{year}/{week}', [MealSelections::class, 'viewCollatedIngredients'])->name('selections.view_ingredients');
+    Route::get('/selections/meals/view/{selected_meal_id}', [MealSelections::class, 'viewSelectedMeal'])->name('selections.meals.view');
 
-    Route::get('/meals', [Meals::class, 'viewMeals'])->name('view_meals');
-    Route::get('/view_meal/{id}/', [Meals::class, 'viewMeal'])->name('view_meal');
-    Route::get('/edit_meal/{id}/', [Meals::class, 'editMeal'])->name('edit_meal');
-    Route::post('/edit_meal/{id}/', [Meals::class, 'editMealAction']);
-    Route::get('/edit_meal_ingredients/{id}/', [Meals::class, 'editMealIngredients'])->name('edit_meal_ingredients');
-    Route::post('/edit_meal_ingredients/{id}/', [Meals::class, 'editMealIngredientsAction']);
-    Route::get('/add_meal_ingredient/{id}/', [Meals::class, 'AddMealIngredient'])->name('add_meal_ingredient');
-    Route::post('/add_meal_ingredient/{id}/', [Meals::class, 'AddMealIngredientAction']);
+    Route::get('/meals', [Meals::class, 'viewMeals'])->name('meals');
+    Route::get('/meals/view/{id}', [Meals::class, 'viewMeal'])->name('meals.view');
+    Route::get('/meals/edit/{id}', [Meals::class, 'editMeal'])->name('meals.edit');
+    Route::post('/meals/edit/{id}', [Meals::class, 'editMealAction']);
+    Route::get('/meals/ingredients/edit/{id}', [Meals::class, 'editMealIngredients'])->name('meals.ingredients.edit');
+    Route::post('/meals/ingredients/edit/{id}', [Meals::class, 'editMealIngredientsAction']);
+    Route::get('/meals/ingredients/add/{id}', [Meals::class, 'AddMealIngredient'])->name('meals.ingredients.add');
+    Route::post('/meals/ingredients/add/{id}', [Meals::class, 'AddMealIngredientAction']);
 
-    Route::get('/ingredients/', [Ingredients::class, 'viewIngredients'])->name('view_ingredients');
-    Route::get('/edit_ingredient/{id}/', [Ingredients::class, 'editIndredient'])->name('edit_ingredient');
-    Route::post('/edit_ingredient/{id}/', [Ingredients::class, 'editIndredientAction']);
+    Route::get('/ingredients', [Ingredients::class, 'viewIngredients'])->name('ingredients');
+    Route::get('/ingredients/edit/{id}', [Ingredients::class, 'editIngredient'])->name('ingredients.edit');
+    Route::post('/ingredients/edit/{id}', [Ingredients::class, 'editIngredientAction']);
 
 });

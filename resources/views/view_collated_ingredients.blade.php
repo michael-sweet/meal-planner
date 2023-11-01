@@ -1,5 +1,5 @@
 <x-layout>
-    <a href="{{ route('calendar', [$year, $week]) }}" class="btn btn-primary mb-3">Back to calendar</a>
+    <a href="{{ route('selections.calendar', [$year, $week]) }}" class="btn btn-primary mb-3">Back to calendar</a>
     <table class="table">
         <thead>
             <tr>

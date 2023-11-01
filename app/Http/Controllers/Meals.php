@@ -48,7 +48,7 @@ class Meals extends Controller
                     $meal->image_path = $request->file('image')->storePublicly('meal_images', 'public');
                 }
                 $meal->save();
-                return redirect()->route('view_meal', $meal->id)->with('success', 'Meal saved!');
+                return redirect()->route('meals.view', $meal->id)->with('success', 'Meal saved!');
         }
 
         return back();
@@ -77,7 +77,7 @@ class Meals extends Controller
                 $meal->mealIngredients()->save($meal_ingredient);
                 $ingredient->mealIngredients()->save($meal_ingredient);
 
-                return redirect()->route('view_meal', $meal->id)->with('success', 'Ingredient added!');
+                return redirect()->route('meals.view', $meal->id)->with('success', 'Ingredient added!');
 
         }
     }
@@ -104,7 +104,7 @@ class Meals extends Controller
                         $meal_ingredient->amount = $request->meal_ingredients[$meal_ingredient->id];
                         $meal_ingredient->save();
                     }
-                    return redirect()->route('view_meal', $meal->id)->with('success', 'Amounts saved!');
+                    return redirect()->route('meals.view', $meal->id)->with('success', 'Amounts saved!');
         }
 
         return back();

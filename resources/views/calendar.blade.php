@@ -6,9 +6,9 @@
         <script>
             window.Laravel = {
                 routes: {
-                    editSelection: "{{ route('edit_selections', ['year' => ':year', 'week' => ':week']) }}",
-                    viewCollatedIngredients: "{{ route('view_collated_ingredients', ['year' => ':year', 'week' => ':week']) }}",
-                    viewMeal: "{{ route('view_selected_meal', ['selected_meal_id' => ':selected_meal_id']) }}"
+                    editSelection: "{{ route('selections.edit', ['year' => ':year', 'week' => ':week']) }}",
+                    viewCollatedIngredients: "{{ route('selections.view_ingredients', ['year' => ':year', 'week' => ':week']) }}",
+                    viewMeal: "{{ route('selections.meals.view', ['selected_meal_id' => ':selected_meal_id']) }}"
                 }
             };
 

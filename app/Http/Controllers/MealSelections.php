@@ -66,7 +66,7 @@ class MealSelections extends Controller
                     $selection->user_id = Auth::user()->id;
                     $selection->save();
                 }
-                return redirect()->route('calendar')->with('success', 'Meal selections saved!');
+                return redirect()->route('selections.calendar')->with('success', 'Meal selections saved!');
         }
     }
 

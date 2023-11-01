@@ -1,7 +1,7 @@
 <x-layout>
     <h1 class="mb-3">
         Ingredients
-        <a href="{{ url('edit_ingredient', [0]) }}" class="ms-2"><i class="fa-solid fa-circle-plus"></i></a>
+        <a href="{{ route('ingredients.edit', [0]) }}" class="ms-2"><i class="fa-solid fa-circle-plus"></i></a>
     </h1>
     <table class="table">
         <thead>
@@ -18,7 +18,7 @@
                     <td>{{ $ingredient->name }}</td>
                     <td>{{ $ingredient->unit }}</td>
                     <td>{{ $ingredient->meals->count() }}</td>
-                    <td><a href="{{ url('edit_ingredient', [$ingredient->id]) }}">edit</a></td>
+                    <td><a href="{{ route('ingredients.edit', [$ingredient->id]) }}">edit</a></td>
                 </tr>
             @endforeach
         </tbody>
