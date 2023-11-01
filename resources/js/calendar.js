@@ -35,7 +35,6 @@ if (calendarEl) {
 
     if (window.calendar.calendar_start) {
         calendar.gotoDate(window.calendar.calendar_start);
-        console.log(window.calendar.calendar_start)
     }
 
     let getCurrentYear = () => {

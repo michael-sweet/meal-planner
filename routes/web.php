@@ -40,6 +40,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/selections/edit/{year}/{week}', [MealSelections::class, 'editSelectionsAction']);
     Route::get('/selections/view_ingredients/{year}/{week}', [MealSelections::class, 'viewCollatedIngredients'])->name('selections.view_ingredients');
     Route::get('/selections/meals/view/{selected_meal_id}', [MealSelections::class, 'viewSelectedMeal'])->name('selections.meals.view');
+    Route::post('/selections/meals/view/{selected_meal_id}', [MealSelections::class, 'viewSelectedMealAction']);
 
     Route::get('/meals', [Meals::class, 'viewMeals'])->name('meals');
     Route::get('/meals/view/{id}', [Meals::class, 'viewMeal'])->name('meals.view');

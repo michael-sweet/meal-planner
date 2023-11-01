@@ -22,6 +22,14 @@
                     @endforeach
                 </tbody>
             </table>
+            <form method="post">
+                @csrf
+                @if ($meal_selection->cooked)
+                    <button type="submit" class="btn btn-secondary" name="submitted" value="mark_uncooked">Mark Uncooked</button>
+                @else
+                    <button type="submit" class="btn btn-primary" name="submitted" value="mark_cooked">Mark Cooked</button>
+                @endif
+            </form>
         </div>
     </div>
 </x-meal_layout>

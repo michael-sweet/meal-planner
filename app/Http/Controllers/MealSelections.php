@@ -19,6 +19,7 @@ class MealSelections extends Controller
                 'start' => Carbon::create($selection->year)->setISODate($selection->year, $selection->week)->toDateString(),
                 'meal' => $selection->meal->toArray(),
                 'meal_selection_id' => $selection->id,
+                'className' => $selection->cooked ? 'text-decoration-line-through' : 'fw-bold',
                 'meal_ingredients' => $selection->meal->mealIngredients->load('ingredient')->toArray()
             ];
         }
@@ -43,6 +44,22 @@ class MealSelections extends Controller
             'meal_selection' => $meal_selection,
             'meal_ingredients' => $meal_selection->meal->mealIngredients->load('ingredient')
         ]);
+    }
+
+    public function viewSelectedMealAction(Request $request, int $selected_meal_id)
+    {
+        $meal_selection = MealSelection::findOrFail($selected_meal_id);
+
+        switch ($request->submitted) {
+            case 'mark_cooked':
+                $meal_selection->cooked = true;
+                $meal_selection->save();
+                return redirect()->route('selections.meals.view', [$selected_meal_id])->with('success', 'Marked as cooked!');
+            case 'mark_uncooked':
+                $meal_selection->cooked = false;
+                $meal_selection->save();
+                return redirect()->route('selections.meals.view', [$selected_meal_id])->with('success', 'Marked as uncooked!');
+        }
     }
 
     public function editSelections(int $year, int $week)
