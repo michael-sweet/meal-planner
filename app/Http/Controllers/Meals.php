@@ -7,7 +7,6 @@ use App\Models\Ingredient;
 use Illuminate\Http\Request;
 use App\Models\MealIngredient;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 
 class Meals extends Controller
 {
@@ -20,11 +19,11 @@ class Meals extends Controller
 
     public function viewMeal($id)
     {
-        $meal = Meal::findOrNew($id);
+        $meal = Meal::findOrFail($id);
 
         return view('view_meal', [
             'meal' => $meal,
-            'meal_ingredients' => $meal->mealIngredients->load('ingredient')
+            'meal_ingredients' => $meal->getMealIngredients()
         ]);
     }
 
@@ -45,7 +44,7 @@ class Meals extends Controller
             case 'edit_meal':
                 $meal->name = $request->name;
                 if ($request->file('image')) {
-                    $meal->image_path = $request->file('image')->storePublicly('meal_images', 'public');
+                    $meal->image_path = $request->file('image')->storePublicly('meal_images/' . Auth::user()->id, 'public');
                 }
                 $meal->save();
                 return redirect()->route('meals.view', $meal->id)->with('success', 'Meal saved!');
@@ -88,7 +87,7 @@ class Meals extends Controller
 
         return view('edit_meal_ingredients', [
             'meal' => $meal,
-            'meal_ingredients' => $meal->mealIngredients->load('ingredient'),
+            'meal_ingredients' => $meal->getMealIngredients(),
             'ingredients' => Ingredient::all()
         ]);
     }

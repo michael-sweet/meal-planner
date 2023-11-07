@@ -10,7 +10,7 @@
         </style>
     </head>
     <body>
-        <div class="navbar navbar-expand-lg mb-5">
+        <div class="navbar navbar-expand-lg">
             <div class="collapse navbar-collapse">
                 <ul class="container navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -40,17 +40,23 @@
                 </ul>
             </div>
         </div>
-        <div class="container container__main" id="app">
+        <div class="container">
             @if (session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
+                <div class="position-relative d-flex justify-content-center">
+                    <div class="alert alert-success alert-dismissible shadow position-absolute mt-3">
+                        {{ session('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                 </div>
             @endif
+        </div>
+        <div class="container container__main" id="app">
             {{ $slot }}
         </div>
+        <x-modals.confirm></x-modals.confirm>
     </body>
-    @isset($scripts_before)
-        {{ $scripts_before }}
-    @endisset
     <script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
+    @isset($scripts)
+        {{ $scripts }}
+    @endisset
 </html>

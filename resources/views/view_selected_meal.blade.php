@@ -25,9 +25,9 @@
             <form method="post">
                 @csrf
                 @if ($meal_selection->cooked)
-                    <button type="submit" class="btn btn-secondary" name="submitted" value="mark_uncooked">Mark Uncooked</button>
+                    <button type="submit" class="btn btn-secondary" name="submitted" value="mark_uncooked">Mark uncooked</button>
                 @else
-                    <button type="submit" class="btn btn-primary" name="submitted" value="mark_cooked">Mark Cooked</button>
+                    <button type="submit" class="btn btn-primary" name="submitted" value="mark_cooked">Mark cooked</button>
                 @endif
             </form>
         </div>

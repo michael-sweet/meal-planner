@@ -7,15 +7,18 @@
     <body>
         <div class="container" id="app">
             @if (session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
+                <div class="position-relative d-flex justify-content-center">
+                    <div class="alert alert-success alert-dismissible shadow position-absolute">
+                        {{ session('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                 </div>
             @endif
             {{ $slot }}
         </div>
     </body>
-    @isset($scripts_before)
-        {{ $scripts_before }}
-    @endisset
     <script type="text/javascript" src="{{ mix('/js/app.js') }}"></script>
+    @isset($scripts)
+        {{ $scripts }}
+    @endisset
 </html>

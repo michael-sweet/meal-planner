@@ -4,11 +4,13 @@ namespace App\Models;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Meal extends Model
 {
     use HasFactory;
+    use SoftDeletes;
     public $timestamps = false;
 
     public function mealIngredients()
@@ -35,11 +37,18 @@ class Meal extends Model
         return Meal::where(['user_id' => $user->id])->with('ingredients')->get();
     }
 
+    public function getMealIngredients()
+    {
+        return $this->mealIngredients->load('ingredient')->filter(function ($meal_ingredient) {
+            return $meal_ingredient->ingredient;
+        })->all();
+    }
+
     public static function collateIngredients($meals)
     {
         $ingredients = [];
         foreach ($meals as $meal) {
-            foreach ($meal->mealIngredients as $meal_ingredient) {
+            foreach ($meal->getMealIngredients() as $meal_ingredient) {
                 if (!isset($ingredients[$meal_ingredient->ingredient->id])) {
                     $ingredients[$meal_ingredient->ingredient->id] = 0;
                 }

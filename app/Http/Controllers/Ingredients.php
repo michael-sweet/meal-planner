@@ -31,4 +31,12 @@ class Ingredients extends Controller
 
         return redirect()->route('ingredients')->with('success', 'Ingredient saved!');
     }
+
+    public function deleteIngredientAction($id, Request $request)
+    {
+        $ingredient = Ingredient::findOrFail($id);
+        $ingredient->delete();
+
+        return redirect()->route('ingredients')->with('success', 'Ingredient deleted!');
+    }
 }

@@ -3,33 +3,30 @@ require('@fullcalendar/list');
 
 import { Calendar } from '@fullcalendar/core';
 import listPlugin from '@fullcalendar/list';
+import bootstrap from '@fullcalendar/bootstrap';
+import luxonPlugin from '@fullcalendar/luxon3';
+import { toLuxonDateTime } from '@fullcalendar/luxon3';
 
 let calendarEl = document.getElementById('calendar');
 if (calendarEl) {
     let calendar = new Calendar(calendarEl, {
         events: window.calendar.events,
-        plugins: [listPlugin],
+        plugins: [luxonPlugin, listPlugin, bootstrap],
+        themeSystem: 'bootstrap',
         initialView: 'listWeek',
         noEventsContent: 'No meals selected for this week',
         headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'editMealSelections'
+            left: 'title',
+            right: 'today prev,next'
         },
         eventClick: (info) => {
             window.location.href = window.Laravel.routes.viewMeal.replace(':selected_meal_id', info.event.extendedProps.meal_selection_id);
         },
         listDayFormat: false,
         listDaySideFormat: false,
+        datesSet: updateButtons,
         height: 'auto',
-        customButtons: {
-            editMealSelections: {
-                'text': 'Choose meals for week',
-                click: () => {
-                    window.location.href = window.Laravel.routes.editSelection.replace(':year', getCurrentYear()).replace(':week', getCurrentWeek());
-                }
-            }
-        }
+        firstDay: 1
     });
     calendar.render();
 
@@ -37,15 +34,36 @@ if (calendarEl) {
         calendar.gotoDate(window.calendar.calendar_start);
     }
 
-    let getCurrentYear = () => {
-        return calendar.formatDate(calendar.view.currentStart, { year: 'numeric' });
+    function getCurrentYear() {
+        var luxonDate = toLuxonDateTime(calendar.view.currentStart, calendar)
+        return luxonDate.weekYear;
     }
-    let getCurrentWeek = () => {
-        return calendar.formatDate(calendar.view.currentStart, { week: 'numeric' });
+
+    function getCurrentWeek() {
+        var luxonDate = toLuxonDateTime(calendar.view.currentStart, calendar)
+        return luxonDate.weekNumber;
+    }
+
+    function updateButtons() {
+        var eventsThisWeek = calendar.getEvents().filter(function(event) {
+            return event.start >= calendar.view.currentStart && event.start <= calendar.view.currentStart;
+        });
+        if ($.isEmptyObject(eventsThisWeek)) {
+            $('#view_ingredients').hide();
+            $('#edit_meal_selections').addClass('btn-primary').removeClass('btn-secondary');
+        } else {
+            $('#view_ingredients').show();
+            $('#edit_meal_selections').addClass('btn-secondary').removeClass('btn-primary');
+        }
     }
 
     $('#view_ingredients').click(() => {
         window.location.href = window.Laravel.routes.viewCollatedIngredients.replace(':year', getCurrentYear()).replace(':week', getCurrentWeek());
+        return false;
+    })
+
+    $('#edit_meal_selections').click(() => {
+        window.location.href = window.Laravel.routes.editSelection.replace(':year', getCurrentYear()).replace(':week', getCurrentWeek());
         return false;
     })
 }

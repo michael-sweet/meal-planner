@@ -5,4 +5,5 @@
  */
 
 require('./bootstrap');
+require('./general');
 require('./calendar');

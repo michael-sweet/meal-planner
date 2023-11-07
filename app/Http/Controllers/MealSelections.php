@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\DateFormatter;
 use Carbon\Carbon;
 use App\Models\Meal;
 use Illuminate\Http\Request;
@@ -20,7 +21,7 @@ class MealSelections extends Controller
                 'meal' => $selection->meal->toArray(),
                 'meal_selection_id' => $selection->id,
                 'className' => $selection->cooked ? 'text-decoration-line-through' : 'fw-bold',
-                'meal_ingredients' => $selection->meal->mealIngredients->load('ingredient')->toArray()
+                'meal_ingredients' => $selection->meal->getMealIngredients()
             ];
         }
 
@@ -42,7 +43,7 @@ class MealSelections extends Controller
         return view('view_selected_meal', [
             'meal' => $meal_selection->meal,
             'meal_selection' => $meal_selection,
-            'meal_ingredients' => $meal_selection->meal->mealIngredients->load('ingredient')
+            'meal_ingredients' => $meal_selection->meal->getMealIngredients()
         ]);
     }
 
@@ -75,7 +76,7 @@ class MealSelections extends Controller
         switch ($request->submitted) {
             case 'save_selections':
                 MealSelection::wipe($year, $week);
-                foreach ($request->meal_selections as $selected_meal_id) {
+                foreach ($request->meal_selections ?: [] as $selected_meal_id) {
                     $selection = new MealSelection();
                     $selection->year = $year;
                     $selection->week = $week;
@@ -83,7 +84,7 @@ class MealSelections extends Controller
                     $selection->user_id = Auth::user()->id;
                     $selection->save();
                 }
-                return redirect()->route('selections.calendar')->with('success', 'Meal selections saved!');
+                return redirect()->route('selections.calendar', [$year, $week])->with('success', 'Meal selections saved!');
         }
     }
 
@@ -92,11 +93,13 @@ class MealSelections extends Controller
         $week_selections = MealSelection::userWeekSelections($year, $week);
         $ingredients = $week_selections->pluck('meal.ingredients')->flatten()->unique('id');
         $collated_ingredients = Meal::collateIngredients($week_selections->pluck('meal'));
+
         return view('view_collated_ingredients', [
             'ingredients' => $ingredients,
             'totals' => $collated_ingredients,
             'year' => $year,
-            'week' => $week
+            'week' => $week,
+            'heading' => DateFormatter::formatWeekRange($year, $week)
         ]);
     }
 }

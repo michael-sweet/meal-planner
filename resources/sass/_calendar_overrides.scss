@@ -1,3 +1,14 @@
 .fc-list-event-time, .fc-list-event-graphic, .fc-list-day {
     display: none;
 }
+
+.fc-today-button {
+    text-transform: capitalize;
+}
+
+.fc-theme-bootstrap {
+
+    .btn .fa {
+        line-height: $btn-line-height;
+    }
+}

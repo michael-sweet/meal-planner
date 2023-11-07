@@ -14,7 +14,7 @@ class AddCookedColumnToMealSelectionTable extends Migration
     public function up()
     {
         Schema::table('meal_selections', function (Blueprint $table) {
-            $table->boolean('cooked');
+            $table->boolean('cooked')->default(0);
         });
     }
 

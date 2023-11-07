@@ -54,5 +54,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/ingredients', [Ingredients::class, 'viewIngredients'])->name('ingredients');
     Route::get('/ingredients/edit/{id}', [Ingredients::class, 'editIngredient'])->name('ingredients.edit');
     Route::post('/ingredients/edit/{id}', [Ingredients::class, 'editIngredientAction']);
+    Route::post('/ingredients/delete/{id}', [Ingredients::class, 'deleteIngredientAction'])->name('ingredients.delete');
 
 });

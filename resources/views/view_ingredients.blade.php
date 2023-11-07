@@ -9,7 +9,7 @@
                 <th>Name</th>
                 <th>Unit</th>
                 <th>Meal count</th>
-                <th></th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -18,7 +18,28 @@
                     <td>{{ $ingredient->name }}</td>
                     <td>{{ $ingredient->unit }}</td>
                     <td>{{ $ingredient->meals->count() }}</td>
-                    <td><a href="{{ route('ingredients.edit', [$ingredient->id]) }}">edit</a></td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('ingredients.edit', [$ingredient->id]) }}">Edit</a></li>
+                                <li>
+                                    <form method="post" action="{{ route('ingredients.delete', [$ingredient->id]) }}" class="m-0">
+                                        @csrf
+                                        <button class="dropdown-item js-modal-confirm"
+                                            data-modal-title="{{ $ingredient->name }}"
+                                            data-modal-body="<p><strong>Are you sure you want to delete?</strong></p><p>There are <strong>{{ $ingredient->meals->count() }}</strong> meal(s) with this ingredient.</p>"
+                                            data-modal-action="Delete"
+                                            data-modal-action-class="btn-danger">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                          </div>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
