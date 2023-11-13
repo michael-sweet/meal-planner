@@ -3,6 +3,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="/css/app_{{ Cookie::get('theme') ?? 'blue' }}.css" rel="stylesheet" id="theme-stylesheet">
+        <title>Meal Planner</title>
     </head>
     <body>
         <div class="container" id="app">
