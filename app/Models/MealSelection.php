@@ -23,7 +23,7 @@ class MealSelection extends Model
             $user = Auth::user();
         }
 
-        return self::where(['user_id' => $user->id])->with(['meal.ingredients'])->get();
+        return self::where(['user_id' => $user->id])->whereHas('meal')->get();
     }
 
     public static function userWeekSelections(int $year, int $week, User $user = null)
@@ -38,7 +38,7 @@ class MealSelection extends Model
             'week' => $week
         ];
 
-        return self::where($conditions)->with('meal')->get();
+        return self::where($conditions)->whereHas('meal')->get();
     }
 
     public static function wipe($year, $week, User $user = null)

@@ -14,7 +14,7 @@ class AddFilePathToMeals extends Migration
     public function up()
     {
         Schema::table('meals', function (Blueprint $table) {
-            $table->string('image_path');
+            $table->string('image_path')->nullable();
         });
     }
 

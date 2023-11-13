@@ -1,0 +1,95 @@
+body {
+    background-color: unset;
+}
+
+html {
+    position: relative;
+    background-color: $background-color;
+    transition: color $default-transition, background-color $default-transition;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.33;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+form {
+    margin-bottom: 0px;
+}
+
+a i {
+    text-decoration: none;
+}
+
+.btn:not(.btn-link) {
+    &:hover {
+        @extend .shadow;
+    }
+}
+
+.navbar {
+    border-bottom: 1px solid $nav-border-color;
+    background-color: $nav-background-color;
+
+    @include media-breakpoint-down(sm) {
+        box-shadow: none !important;
+    }
+}
+
+.navbar-brand svg {
+    height: 30px;
+    fill: $primary;
+}
+
+.nav-link {
+    color: $primary;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    @extend .shadow;
+}
+
+@include media-breakpoint-down(sm) {
+    .navbar .dropdown-menu {
+        box-shadow: none !important;
+    }
+}
+
+.container__main {
+    background-color: $body-bg;
+
+    &--sm {
+        max-width: 576px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include media-breakpoint-down(sm) {
+        border-radius: 0px !important;
+    }
+}
+
+.fc .fc-toolbar {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fc-list-event-title {
+    cursor: pointer;
+}
+
+.fc-list-table {
+    @extend .table, .table-striped;
+}

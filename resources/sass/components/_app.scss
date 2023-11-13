@@ -1,0 +1,30 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+// Select2
+@import "select2/src/scss/core.scss";
+@import "select2-bootstrap-5-theme/src/include-all";
+// Fontawesome
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/regular.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+@import "@fortawesome/fontawesome-free/scss/brands.scss";
+
+@import 'general';
+@import 'card_meal';
+@import 'calendar_overrides';
+
+.theme-blue {
+    color: #335571;
+}
+
+.theme-green {
+    color: #337155;
+}
+
+.theme-purple {
+    color: #573355;
+}

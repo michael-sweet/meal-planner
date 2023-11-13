@@ -1,0 +1,53 @@
+.card-meal {
+    transition: box-shadow $default-transition;
+    overflow: hidden;
+    border: 1px solid $card-border-color;
+    background-color: $card-meal-bg;
+
+    &:hover {
+        @extend .shadow;
+    }
+
+    &__img {
+        height: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &.selection {
+        cursor: pointer;
+
+        .form-check-label {
+            display: block;
+            cursor: pointer;
+        }
+
+        .form-check-input + .form-check-label {
+            .icon-checked {
+                display: none;
+            }
+
+            .icon-unchecked {
+                display: inline;
+            }
+        }
+
+        .form-check-input:checked + .form-check-label {
+            color: white;
+            background-color: $primary;
+
+            .icon-checked {
+                display: inline;
+            }
+
+            .icon-unchecked {
+                display: none;
+            }
+        }
+    }
+}

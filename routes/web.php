@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\Demos;
 use App\Http\Controllers\Meals;
+use App\Http\Controllers\Users;
 use Illuminate\Support\Facades\App;
+use App\Http\Controllers\Auth\Demos;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Ingredients;
 use Illuminate\Support\Facades\Route;
@@ -43,17 +44,19 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/selections/meals/view/{selected_meal_id}', [MealSelections::class, 'viewSelectedMealAction']);
 
     Route::get('/meals', [Meals::class, 'viewMeals'])->name('meals');
-    Route::get('/meals/view/{id}', [Meals::class, 'viewMeal'])->name('meals.view');
-    Route::get('/meals/edit/{id}', [Meals::class, 'editMeal'])->name('meals.edit');
-    Route::post('/meals/edit/{id}', [Meals::class, 'editMealAction']);
-    Route::get('/meals/ingredients/edit/{id}', [Meals::class, 'editMealIngredients'])->name('meals.ingredients.edit');
-    Route::post('/meals/ingredients/edit/{id}', [Meals::class, 'editMealIngredientsAction']);
-    Route::get('/meals/ingredients/add/{id}', [Meals::class, 'AddMealIngredient'])->name('meals.ingredients.add');
-    Route::post('/meals/ingredients/add/{id}', [Meals::class, 'AddMealIngredientAction']);
+    Route::get('/meals/view/{meal_id}', [Meals::class, 'viewMeal'])->name('meals.view');
+    Route::get('/meals/edit/{meal_id}', [Meals::class, 'editMeal'])->name('meals.edit');
+    Route::post('/meals/edit/{meal_id}', [Meals::class, 'editMealAction']);
+    Route::post('/meals/delete/{meal_id}', [Meals::class, 'deleteMealAction'])->name('meals.delete');
+    Route::get('/meals/ingredients/edit/{meal_id}/{meal_ingredient_id}', [Meals::class, 'editMealIngredient'])->name('meals.ingredients.edit');
+    Route::post('/meals/ingredients/edit/{meal_id}/{meal_ingredient_id}', [Meals::class, 'editMealIngredientAction']);
+    Route::post('/meals/ingredients/delete/{meal_id}/{meal_ingredient_id}', [Meals::class, 'deleteMealIngredientAction'])->name('meals.ingredients.delete');
 
     Route::get('/ingredients', [Ingredients::class, 'viewIngredients'])->name('ingredients');
-    Route::get('/ingredients/edit/{id}', [Ingredients::class, 'editIngredient'])->name('ingredients.edit');
-    Route::post('/ingredients/edit/{id}', [Ingredients::class, 'editIngredientAction']);
-    Route::post('/ingredients/delete/{id}', [Ingredients::class, 'deleteIngredientAction'])->name('ingredients.delete');
+    Route::get('/ingredients/edit/{ingredient_id}', [Ingredients::class, 'editIngredient'])->name('ingredients.edit');
+    Route::post('/ingredients/edit/{ingredient_id}', [Ingredients::class, 'editIngredientAction']);
+    Route::post('/ingredients/delete/{ingredient_id}', [Ingredients::class, 'deleteIngredientAction'])->name('ingredients.delete');
 
+    Route::get('/users/edit', [Users::class, 'edit'])->name('users.edit');
+    Route::post('/users/edit', [Users::class, 'editAction']);
 });

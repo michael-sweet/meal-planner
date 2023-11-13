@@ -17,6 +17,7 @@ class MealFactory extends Factory
         $images = Storage::disk('public')->allFiles('meal_images/');
         return [
             'name' => $this->faker->words(2, true),
+            'description' => $this->faker->text(rand(200, 800)),
             'image_path' => $images[array_rand($images)]
         ];
     }

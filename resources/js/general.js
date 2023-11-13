@@ -4,6 +4,11 @@ $(document).ready(function () {
             $(this).remove();
         });
     }, 2500);
+
+    $('.js-select2').select2({
+        theme: 'bootstrap-5',
+        width: '100%'
+    });
 });
 
 $('.js-modal-confirm').click((e) => {
@@ -30,3 +35,8 @@ $('.js-modal-confirm').click((e) => {
         $('#confirm_modal').modal('hide');
     });
 });
+
+window.switchTheme = function(theme_color) {
+    document.getElementById('theme-stylesheet').setAttribute('href', '/css/app_' + theme_color + '.css');
+    document.cookie = "theme=" + theme_color + "; path=/";
+}

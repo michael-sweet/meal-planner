@@ -7,105 +7,131 @@ use App\Models\Ingredient;
 use Illuminate\Http\Request;
 use App\Models\MealIngredient;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Middleware\MealsMiddleware;
 
 class Meals extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(MealsMiddleware::class);
+        view()->share('current_nav', 'meals');
+    }
+
     public function viewMeals()
     {
-        return view('view_meals', [
+        return view('meals/view_meals', [
             'meals' => Meal::getUserMeals()
         ]);
     }
 
-    public function viewMeal($id)
+    public function viewMeal($meal_id)
     {
-        $meal = Meal::findOrFail($id);
+        $meal = Meal::findOrFail($meal_id);
 
-        return view('view_meal', [
+        view()->share('breadcrumbs', [
+            ['title' => 'Meals', 'link' => route('meals', [$meal->id])],
+            ['title' => $meal->name]
+        ]);
+        return view('meals/view_meal', [
             'meal' => $meal,
             'meal_ingredients' => $meal->getMealIngredients()
         ]);
     }
 
-    public function editMeal($id)
+    public function editMeal($meal_id)
     {
-        $meal = Meal::findOrNew($id);
+        $meal = Meal::findOrNew($meal_id);
 
-        return view('edit_meal', [
-            'meal' => $meal
+        $breadcrumbs = [['title' => 'Meals', 'link' => route('meals')]];
+        if ($meal->id) {
+            $breadcrumbs[] = ['title' => $meal->name, 'link' => route('meals.view', [$meal->id])];
+            $breadcrumbs[] = ['title' => 'Edit meal'];
+            $cancel_link = route('meals.view', [$meal->id]);
+        } else {
+            $breadcrumbs[] = ['title' => 'Add meal'];
+            $cancel_link = route('meals');
+        }
+        view()->share('breadcrumbs', $breadcrumbs);
+        return view('meals/edit_meal', [
+            'meal' => $meal,
+            'cancel_link' => $cancel_link
         ]);
     }
 
-    public function editMealAction($id, Request $request)
+    public function editMealAction($meal_id, Request $request)
     {
-        $meal = Meal::findOrNew($id);
+        $request->validate([
+            'name' => 'required'
+        ], [
+            'name.required' => 'Please enter a name'
+        ]);
 
-        switch ($request->submitted) {
-            case 'edit_meal':
-                $meal->name = $request->name;
-                if ($request->file('image')) {
-                    $meal->image_path = $request->file('image')->storePublicly('meal_images/' . Auth::user()->id, 'public');
-                }
-                $meal->save();
-                return redirect()->route('meals.view', $meal->id)->with('success', 'Meal saved!');
+        $meal = Meal::findOrNew($meal_id);
+        $meal->name = $request->name;
+        $meal->description = $request->description;
+        $meal->user_id = Auth::user()->id;
+        if ($request->file('image')) {
+            $meal->image_path = $request->file('image')->storePublicly('meal_images/' . Auth::user()->id, 'public');
         }
-
-        return back();
+        $meal->save();
+        return redirect()->route('meals.view', $meal->id)->with('success', 'Meal saved!');
     }
 
-    public function addMealIngredient($meal_id)
+    public function editMealIngredient($meal_id, $meal_ingredient_id)
     {
         $meal = Meal::findOrFail($meal_id);
-        return view('add_meal_ingredient', [
+        $meal_ingredient = MealIngredient::findOrNew($meal_ingredient_id);
+
+        view()->share('breadcrumbs', [
+            ['title' => 'Meals', 'link' => route('meals', [$meal->id])],
+            ['title' => $meal->name, 'link' => route('meals.view', [$meal->id])],
+            ['title' => $meal_ingredient->id ? 'Edit meal ingredient' : 'Add meal ingredient']
+        ]);
+        return view('meals/edit_meal_ingredient', [
             'meal' => $meal,
-            'ingredients' => Ingredient::all()
+            'meal_ingredient' => $meal_ingredient,
+            'ingredients' => Ingredient::where('user_id', Auth::user()->id)->get()
         ]);
     }
 
-    public function addMealIngredientAction($meal_id, Request $request)
+    public function editMealIngredientAction($meal_id, $meal_ingredient_id, Request $request)
+    {
+        $request->validate([
+            'ingredient_id' => 'required',
+            'amount' => 'required|integer'
+        ], [
+            'ingredient_id.required' => 'Please select an ingredient',
+            'amount.required' => 'Please enter an amount',
+            'amount.integer' => 'Amount must be a number'
+        ]);
+
+        $meal = Meal::findOrFail($meal_id);
+        $meal_ingredient = MealIngredient::findOrNew($meal_ingredient_id);
+        $ingredient = Ingredient::findOrFail($request->ingredient_id);
+
+        $meal_ingredient->amount = $request->amount;
+        $meal_ingredient->save();
+
+        $meal->mealIngredients()->save($meal_ingredient);
+        $ingredient->mealIngredients()->save($meal_ingredient);
+
+        return redirect()->route('meals.view', $meal->id)->with('success', 'Meal ingredient saved!');
+    }
+
+    public function deleteMealAction($meal_id, Request $request)
     {
         $meal = Meal::findOrFail($meal_id);
-        switch ($request->submitted) {
-            case 'add_ingredient':
-                $ingredient = Ingredient::findOrFail($request->ingredient_id);
+        $meal->delete();
 
-                $meal_ingredient = new MealIngredient();
-                $meal_ingredient->amount = $request->amount;
-                $meal_ingredient->save();
-
-                $meal->mealIngredients()->save($meal_ingredient);
-                $ingredient->mealIngredients()->save($meal_ingredient);
-
-                return redirect()->route('meals.view', $meal->id)->with('success', 'Ingredient added!');
-
-        }
+        return redirect()->route('meals')->with('success', 'Meal deleted!');
     }
 
-    public function editMealIngredients($id)
+    public function deleteMealIngredientAction($meal_id, $meal_ingredient_id, Request $request)
     {
-        $meal = Meal::findOrFail($id);
+        $meal = Meal::findOrFail($meal_id);
+        $meal_ingredient = MealIngredient::findOrFail($meal_ingredient_id);
+        $meal_ingredient->delete();
 
-        return view('edit_meal_ingredients', [
-            'meal' => $meal,
-            'meal_ingredients' => $meal->getMealIngredients(),
-            'ingredients' => Ingredient::all()
-        ]);
-    }
-
-    public function editMealIngredientsAction($id, Request $request)
-    {
-        $meal = Meal::findOrFail($id);
-
-        switch ($request->submitted) {
-                case 'save_amounts':
-                    $meal_ingredients = MealIngredient::findOrFail(array_keys($request->meal_ingredients));
-                    foreach ($meal_ingredients as $meal_ingredient) {
-                        $meal_ingredient->amount = $request->meal_ingredients[$meal_ingredient->id];
-                        $meal_ingredient->save();
-                    }
-                    return redirect()->route('meals.view', $meal->id)->with('success', 'Amounts saved!');
-        }
-
-        return back();
+        return redirect()->route('meals.view', [$meal->id])->with('success', 'Meal ingredient deleted!');
     }
 }

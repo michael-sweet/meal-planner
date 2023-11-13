@@ -1,0 +1,1889 @@
+[
+    {
+        "name": "Oven-Baked Basa and Chive Hollandaise Sauce",
+        "description": "This Oven-Baked Basa and Chive Hollandaise Sauce is bursting full of flavours and makes the perfect dinner night option from HelloFresh. Cook up a fresh start!\nSOURCE OF PROTEIN - Protein contributes to the maintenance of muscle mass.",
+        "image_path": "meal_images/samples/Oven-Baked_Basa_and_Chive_Hollandaise_Sauce.jpg",
+        "ingredients": [
+            {
+                "name": "Potatoes",
+                "unit": "grams",
+                "amount": "450"
+            },
+            {
+                "name": "Mixed Herbs",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Carrot",
+                "unit": "unit(s)",
+                "amount": "3"
+            },
+            {
+                "name": "Honey",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Chives",
+                "unit": "bunch(es)",
+                "amount": "1"
+            },
+            {
+                "name": "Basa Fillets",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Lemon & Herb Seasoning",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Hollandaise Sauce",
+                "unit": "grams",
+                "amount": "100"
+            }
+        ]
+    },
+    {
+        "name": "Chipotle Chicken, Halloumi and Pepper Skewers",
+        "description": "Inspired by some of the world's most popular street food, these tasty Chipotle Chicken, Halloumi and Pepper Skewers are perfect for a casual sharing-style dinner.",
+        "image_path": "meal_images/samples/Chipotle_Chicken,_Halloumi_and_Pepper_Skewers.jpg",
+        "ingredients": [
+            {
+                "name": "Bamboo Skewers",
+                "unit": "unit(s)",
+                "amount": "6"
+            },
+            {
+                "name": "Halloumi",
+                "unit": "grams",
+                "amount": "225"
+            },
+            {
+                "name": "Bell Pepper",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Lime",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Chicken Thighs",
+                "unit": "unit(s)",
+                "amount": "3"
+            },
+            {
+                "name": "Chipotle Paste",
+                "unit": "grams",
+                "amount": "20"
+            },
+            {
+                "name": "Potatoes",
+                "unit": "grams",
+                "amount": "450"
+            },
+            {
+                "name": "Mexican Style Spice Mix",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Soured Cream",
+                "unit": "grams",
+                "amount": "75"
+            },
+            {
+                "name": "Avocado",
+                "unit": "unit(s)",
+                "amount": "1"
+            }
+        ]
+    },
+    {
+        "name": "Yellow Thai Style Veggie Noodle Soup",
+        "description": "Looking for a quick and tasty midweek dinner option? Try cooking up our Yellow Thai Style Veggie Noodle Soup in just 20-25 minutes for a delicious and speedy meal.",
+        "image_path": "meal_images/samples/Yellow_Thai_Style_Veggie_Noodle_Soup.jpg",
+        "ingredients": [
+            {
+                "name": "Pak Choi",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Tenderstem Broccoli",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Lime",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Egg Noodle Nest",
+                "unit": "grams",
+                "amount": "125"
+            },
+            {
+                "name": "Thai Style Spice Blend",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Yellow Thai Style Paste",
+                "unit": "grams",
+                "amount": "45"
+            },
+            {
+                "name": "Peanut Butter",
+                "unit": "grams",
+                "amount": "30"
+            },
+            {
+                "name": "Coconut Milk",
+                "unit": "milliliter(s)",
+                "amount": "200"
+            },
+            {
+                "name": "Soy Sauce",
+                "unit": "milliliter(s)",
+                "amount": "25"
+            },
+            {
+                "name": "Sugar",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Water for the Soup",
+                "unit": "milliliter(s)",
+                "amount": "200"
+            }
+        ]
+    },
+    {
+        "name": "Teriyaki Pork Steaks",
+        "description": "Lower in carbs but high in flavour! Packing a serious flavour punch without loading up on the carbs, this recipe will fill you up and leave you feeling nourished and energised.",
+        "image_path": "meal_images/samples/Teriyaki_Pork_Steaks.jpg",
+        "ingredients": [
+            {
+                "name": "Carrot",
+                "unit": "unit(s)",
+                "amount": "4"
+            },
+            {
+                "name": "Pork Loin Steaks",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Broccoli Florets",
+                "unit": "grams",
+                "amount": "300"
+            },
+            {
+                "name": "Salted Peanuts",
+                "unit": "grams",
+                "amount": "25"
+            },
+            {
+                "name": "Teriyaki Sauce",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Sambal Paste",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Maple Syrup",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Roasted White Sesame Seeds",
+                "unit": "grams",
+                "amount": "5"
+            },
+            {
+                "name": "Water",
+                "unit": "milliliter(s)",
+                "amount": "25"
+            }
+        ]
+    },
+    {
+        "name": "Smoky BBQ Bacon Spaghetti",
+        "description": "Looking for a super quick and tasty midweek dinner option? Try cooking up our Smoky BBQ Bacon Spaghetti in just 15 minutes for a delicious and speedy meal.",
+        "image_path": "meal_images/samples/Smoky_BBQ_Bacon_Spaghetti.jpg",
+        "ingredients": [
+            {
+                "name": "Spaghetti",
+                "unit": "grams",
+                "amount": "180"
+            },
+            {
+                "name": "Bacon Lardons",
+                "unit": "grams",
+                "amount": "90"
+            },
+            {
+                "name": "Tomato Passata",
+                "unit": "carton(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Chipotle Paste",
+                "unit": "grams",
+                "amount": "20"
+            },
+            {
+                "name": "Chicken Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Baby Spinach",
+                "unit": "grams",
+                "amount": "40"
+            },
+            {
+                "name": "BBQ Sauce",
+                "unit": "grams",
+                "amount": "32"
+            },
+            {
+                "name": "Grated Hard Italian Style Cheese",
+                "unit": "grams",
+                "amount": "40"
+            },
+            {
+                "name": "Sugar",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "100"
+            },
+            {
+                "name": "Butter",
+                "unit": "grams",
+                "amount": "20"
+            }
+        ]
+    },
+    {
+        "name": "Parma Ham Pasta in Creamy Garlic Sauce",
+        "description": "Looking for a quick and tasty midweek dinner option? Try cooking up our Parma Ham Pasta in Creamy Garlic Sauce in just 20-25 minutes for a delicious and speedy meal.",
+        "image_path": "meal_images/samples/Parma_Ham_Pasta_in_Creamy_Garlic_Sauce.jpg",
+        "ingredients": [
+            {
+                "name": "Tenderstem Broccoli",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Chicken Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Parma Ham & Parmigiano Reggiano Filled Pasta",
+                "unit": "grams",
+                "amount": "250"
+            },
+            {
+                "name": "Creme Fraiche",
+                "unit": "grams",
+                "amount": "75"
+            },
+            {
+                "name": "Ciabatta",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Grated Hard Italian Style Cheese",
+                "unit": "grams",
+                "amount": "20"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "100"
+            },
+            {
+                "name": "Butter",
+                "unit": "grams",
+                "amount": "30"
+            }
+        ]
+    },
+    {
+        "name": "Creamy Truffle and Mushroom Naanizza",
+        "description": "Our Creamy Truffle and Mushroom Naanizza is a delicious veggie option that makes it easy to eat more veg in your diet and try something new!",
+        "image_path": "meal_images/samples/Creamy_Truffle_and_Mushroom_Naanizza.jpg",
+        "ingredients": [
+            {
+                "name": "Potatoes",
+                "unit": "grams",
+                "amount": "450"
+            },
+            {
+                "name": "Sliced Mushrooms",
+                "unit": "grams",
+                "amount": "120"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Mature Cheddar Cheese",
+                "unit": "grams",
+                "amount": "40"
+            },
+            {
+                "name": "Creme Fraiche",
+                "unit": "grams",
+                "amount": "75"
+            },
+            {
+                "name": "Vegetable Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Plain Naans",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Truffle Zest",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Wild Rocket",
+                "unit": "grams",
+                "amount": "20"
+            },
+            {
+                "name": "Balsamic Glaze",
+                "unit": "milliliter(s)",
+                "amount": "12"
+            },
+            {
+                "name": "Mayonnaise",
+                "unit": "tbsp",
+                "amount": "2"
+            }
+        ]
+    },
+    {
+        "name": "Caribbean Style BBQ Beans",
+        "description": "Looking for a quick and tasty midweek dinner option? Try cooking up our Caribbean Style BBQ Beans in just 20-25 minutes for a delicious and speedy meal.",
+        "image_path": "meal_images/samples/Caribbean_Style_BBQ_Beans.jpg",
+        "ingredients": [
+            {
+                "name": "Basmati Rice",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Mature Cheddar Cheese",
+                "unit": "grams",
+                "amount": "60"
+            },
+            {
+                "name": "Mixed Beans",
+                "unit": "carton(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Tomato Puree",
+                "unit": "grams",
+                "amount": "30"
+            },
+            {
+                "name": "Caribbean Style Jerk",
+                "unit": "sachet(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Vegetable Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Avocado",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Baby Spinach",
+                "unit": "grams",
+                "amount": "40"
+            },
+            {
+                "name": "BBQ Sauce",
+                "unit": "grams",
+                "amount": "48"
+            },
+            {
+                "name": "Crispy Onions",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Sugar",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "100"
+            },
+            {
+                "name": "Butter",
+                "unit": "grams",
+                "amount": "20"
+            }
+        ]
+    },
+    {
+        "name": "Creamy Double Mushroom Penne",
+        "description": "Our Creamy Double Mushroom Penne is a delicious veggie option that makes it easy to eat more veg in your diet and try something new!",
+        "image_path": "meal_images/samples/Creamy_Double_Mushroom_Penne.jpg",
+        "ingredients": [
+            {
+                "name": "Red Onion",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Portobello Mushrooms",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Penne Pasta",
+                "unit": "grams",
+                "amount": "180"
+            },
+            {
+                "name": "Sliced Mushrooms",
+                "unit": "grams",
+                "amount": "120"
+            },
+            {
+                "name": "Balsamic Vinegar",
+                "unit": "milliliter(s)",
+                "amount": "12"
+            },
+            {
+                "name": "Vegetable Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Double Cream",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Grated Hard Italian Style Cheese",
+                "unit": "grams",
+                "amount": "20"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "100"
+            }
+        ]
+    },
+    {
+        "name": "Veggie Peanut Noodle Stir-Fry",
+        "description": "Our Veggie Peanut Noodle Stir-Fry is a delicious veggie option that makes it easy to eat more veg in your diet and try something new!",
+        "image_path": "meal_images/samples/Veggie_Peanut_Noodle_Stir-Fry.jpg",
+        "ingredients": [
+            {
+                "name": "Tenderstem Broccoli",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Green Beans",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Lime",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Egg Noodle Nest",
+                "unit": "grams",
+                "amount": "125"
+            },
+            {
+                "name": "Ketjap Manis",
+                "unit": "grams",
+                "amount": "25"
+            },
+            {
+                "name": "Soy Sauce",
+                "unit": "milliliter(s)",
+                "amount": "15"
+            },
+            {
+                "name": "Peanut Butter",
+                "unit": "grams",
+                "amount": "30"
+            },
+            {
+                "name": "Coleslaw Mix",
+                "unit": "grams",
+                "amount": "120"
+            },
+            {
+                "name": "Red Thai Style Paste",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Salted Peanuts",
+                "unit": "grams",
+                "amount": "25"
+            },
+            {
+                "name": "Boiled Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "200"
+            },
+            {
+                "name": "Sugar for the Sauce",
+                "unit": "tsp",
+                "amount": "1"
+            }
+        ]
+    },
+    {
+        "name": "Coconut, Lentil and Chickpea Dal",
+        "description": "Our Coconut, Lentil and Chickpea Dal is a delicious veggie option that makes it easy to eat more veg in your diet and try something new!",
+        "image_path": "meal_images/samples/Coconut,_Lentil_and_Chickpea_Dal.jpg",
+        "ingredients": [
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Chickpeas",
+                "unit": "carton(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Red Split Lentils",
+                "unit": "grams",
+                "amount": "100"
+            },
+            {
+                "name": "Tikka Masala Paste",
+                "unit": "grams",
+                "amount": "75"
+            },
+            {
+                "name": "Ginger Puree",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Coconut Milk",
+                "unit": "milliliter(s)",
+                "amount": "200"
+            },
+            {
+                "name": "Vegetable Stock Paste",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Plain Naans",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Baby Spinach",
+                "unit": "grams",
+                "amount": "40"
+            },
+            {
+                "name": "Greek Style Natural Yoghurt",
+                "unit": "grams",
+                "amount": "75"
+            },
+            {
+                "name": "Sugar",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Water for the Curry",
+                "unit": "milliliter(s)",
+                "amount": "75"
+            },
+            {
+                "name": "Butter",
+                "unit": "grams",
+                "amount": "20"
+            }
+        ]
+    },
+    {
+        "name": "Classic Cheesy Mushroom Burger",
+        "description": "A customer favourite, this Classic Cheesy Mushroom Burger is a tried-and-tested recipe that always wins with a crowd.\nSOURCE OF PROTEIN - Protein contributes to the maintenance of muscle mass",
+        "image_path": "meal_images/samples/Classic_Cheesy_Mushroom_Burger.jpg",
+        "ingredients": [
+            {
+                "name": "Potatoes",
+                "unit": "grams",
+                "amount": "450"
+            },
+            {
+                "name": "Portobello Mushrooms",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Mature Cheddar Cheese",
+                "unit": "grams",
+                "amount": "60"
+            },
+            {
+                "name": "Medium Tomato",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Onion Marmalade",
+                "unit": "grams",
+                "amount": "40"
+            },
+            {
+                "name": "Red Wine Vinegar",
+                "unit": "grams",
+                "amount": "12"
+            },
+            {
+                "name": "Burger Buns",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Baby Leaf Mix",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Sugar",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Olive Oil for the Dressing",
+                "unit": "tbsp",
+                "amount": "1"
+            }
+        ]
+    },
+    {
+        "name": "Korma and Mango Chutney Glazed Chicken",
+        "description": "Looking for a quick and tasty midweek dinner option? Try cooking up our Korma and Mango Chutney Glazed Chicken in just 20-25 minutes for a delicious and speedy meal.\nHIGH PROTEIN - Protein contributes to the maintenance of muscle mass.",
+        "image_path": "meal_images/samples/Korma_and_Mango_Chutney_Glazed_Chicken.jpg",
+        "ingredients": [
+            {
+                "name": "Green Beans",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Chicken Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Couscous",
+                "unit": "grams",
+                "amount": "120"
+            },
+            {
+                "name": "Diced Chicken Thigh",
+                "unit": "grams",
+                "amount": "260"
+            },
+            {
+                "name": "Medium Tomato",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Korma Curry Paste",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Mango Chutney",
+                "unit": "grams",
+                "amount": "40"
+            },
+            {
+                "name": "Greek Style Natural Yoghurt",
+                "unit": "grams",
+                "amount": "75"
+            },
+            {
+                "name": "Water for the Couscous",
+                "unit": "milliliter(s)",
+                "amount": "240"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "50"
+            }
+        ]
+    },
+    {
+        "name": "Szechuan Chicken Stir-Fry",
+        "description": "Looking for a super quick and tasty midweek dinner option? Try cooking up our Szechuan Chicken Stir-Fry in just 15 minutes for a delicious and speedy meal.\nHIGH PROTEIN - Protein contributes to the maintenance of muscle mass.",
+        "image_path": "meal_images/samples/Szechuan_Chicken_Stir-Fry.jpg",
+        "ingredients": [
+            {
+                "name": "Jasmine Rice",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Diced Chicken Thigh",
+                "unit": "grams",
+                "amount": "260"
+            },
+            {
+                "name": "Sliced Mushrooms",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Mangetout",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Lime",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Szechuan Paste",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Soy Sauce",
+                "unit": "milliliter(s)",
+                "amount": "15"
+            },
+            {
+                "name": "Ketjap Manis",
+                "unit": "grams",
+                "amount": "25"
+            },
+            {
+                "name": "Roasted White Sesame Seeds",
+                "unit": "grams",
+                "amount": "5"
+            },
+            {
+                "name": "Water",
+                "unit": "tbsp",
+                "amount": "2"
+            },
+            {
+                "name": "Honey",
+                "unit": "tbsp",
+                "amount": "1"
+            }
+        ]
+    },
+    {
+        "name": "Sweet and Sticky Korean Style Chicken Stir-Fry",
+        "description": "Looking for a quick and tasty midweek dinner option? Try cooking up our Sweet and Sticky Korean Style Chicken Stir-Fry in just 20-25 minutes for a delicious and speedy meal.\nHIGH PROTEIN - Protein contributes to the maintenance of muscle mass.",
+        "image_path": "meal_images/samples/Sweet_and_Sticky_Korean_Style_Chicken_Stir-Fry.jpg",
+        "ingredients": [
+            {
+                "name": "Bell Pepper",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Red Onion",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Diced Chicken Breast",
+                "unit": "grams",
+                "amount": "260"
+            },
+            {
+                "name": "Jasmine Rice",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Lime",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Ketjap Manis",
+                "unit": "grams",
+                "amount": "25"
+            },
+            {
+                "name": "Gochujang Paste",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Honey",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Roasted White Sesame Seeds",
+                "unit": "grams",
+                "amount": "5"
+            },
+            {
+                "name": "Tomato Ketchup",
+                "unit": "tbsp",
+                "amount": "2"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "50"
+            }
+        ]
+    },
+    {
+        "name": "Teriyaki Lemongrass Beef",
+        "description": "This Teriyaki Lemongrass Beef is a crowd pleaser and is one to get the family round the dinner table for. Super simple to make, and easily customised to suit the kids too.\nHIGH PROTEIN - Protein contributes to the maintenance of muscle mass.",
+        "image_path": "meal_images/samples/Teriyaki_Lemongrass_Beef.jpg",
+        "ingredients": [
+            {
+                "name": "Green Beans",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Carrot",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Jasmine Rice",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Rice Vinegar",
+                "unit": "milliliter(s)",
+                "amount": "15"
+            },
+            {
+                "name": "Roasted White Sesame Seeds",
+                "unit": "grams",
+                "amount": "5"
+            },
+            {
+                "name": "Beef Mince",
+                "unit": "grams",
+                "amount": "240"
+            },
+            {
+                "name": "Ginger, Garlic & Lemongrass Puree",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Indonesian Style Spice Mix",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Teriyaki Sauce",
+                "unit": "grams",
+                "amount": "100"
+            },
+            {
+                "name": "Water for the Rice",
+                "unit": "milliliter(s)",
+                "amount": "300"
+            },
+            {
+                "name": "Sugar for the Pickle",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "50"
+            }
+        ]
+    },
+    {
+        "name": "Harissa Spiced King Prawns",
+        "description": "Harissa adds an irresistible, fiery kick to these plump and juicy large king prawns, the undeniable stars of the dish. Served with fresh, citrusy roast veg and topped with creamy, crumbly salad cheese and crunchy pumpkin seeds. Spicy and vibrant, harissa is widely used in North African and Middle Eastern cuisine. This fragrant paste contains herbs and spices such as dried chillies, star anise, cumin and coriander, making it the perfect match for pilafs, stews and pasta.",
+        "image_path": "meal_images/samples/Harissa_Spiced_King_Prawns.jpg",
+        "ingredients": [
+            {
+                "name": "Courgette",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Bell Pepper",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Chopped Cavolo Nero",
+                "unit": "grams",
+                "amount": "100"
+            },
+            {
+                "name": "Large King Prawns",
+                "unit": "grams",
+                "amount": "250"
+            },
+            {
+                "name": "Harissa Paste",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Greek Style Salad Cheese",
+                "unit": "grams",
+                "amount": "100"
+            },
+            {
+                "name": "Pumpkin Seeds",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Water for the Cavolo Nero",
+                "unit": "tbsp",
+                "amount": "2"
+            }
+        ]
+    },
+    {
+        "name": "Teriyaki Pork Steaks",
+        "description": "Lower in carbs but high in flavour! Packing a serious flavour punch without loading up on the carbs, this recipe will fill you up and leave you feeling nourished and energised.",
+        "image_path": "meal_images/samples/Teriyaki_Pork_Steaks.jpg",
+        "ingredients": [
+            {
+                "name": "Carrot",
+                "unit": "unit(s)",
+                "amount": "4"
+            },
+            {
+                "name": "Pork Loin Steaks",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Broccoli Florets",
+                "unit": "grams",
+                "amount": "300"
+            },
+            {
+                "name": "Salted Peanuts",
+                "unit": "grams",
+                "amount": "25"
+            },
+            {
+                "name": "Teriyaki Sauce",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Sambal Paste",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Maple Syrup",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Roasted White Sesame Seeds",
+                "unit": "grams",
+                "amount": "5"
+            },
+            {
+                "name": "Water",
+                "unit": "milliliter(s)",
+                "amount": "25"
+            }
+        ]
+    },
+    {
+        "name": "Spicy Miso Pork Ramen",
+        "description": "This Japanese-style condiment will be sure to give your food an umami boost. Made from fermented soy bean paste, you can use this versatile paste as a flavour booster in rice bowls, stir-fried noodles and even pasta dishes.",
+        "image_path": "meal_images/samples/Spicy_Miso_Pork_Ramen.jpg",
+        "ingredients": [
+            {
+                "name": "Carrot",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Spring Onion",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Shiitake Mushrooms",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Sweetcorn",
+                "unit": "grams",
+                "amount": "160"
+            },
+            {
+                "name": "Pork Mince",
+                "unit": "grams",
+                "amount": "300"
+            },
+            {
+                "name": "Miso Paste",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Chilli Flakes",
+                "unit": "pinch",
+                "amount": "1"
+            },
+            {
+                "name": "Soy Sauce",
+                "unit": "milliliter(s)",
+                "amount": "15"
+            },
+            {
+                "name": "Asian Broth Paste",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Sambal Paste",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Roasted White Sesame Seeds",
+                "unit": "grams",
+                "amount": "5"
+            },
+            {
+                "name": "Water for the Broth",
+                "unit": "milliliter(s)",
+                "amount": "400"
+            }
+        ]
+    },
+    {
+        "name": "Chicken, Onion and Sun-Dried Tomato Stew",
+        "description": "Lower in carbs but high in flavour! Packing a serious flavour punch without loading up on the carbs, this recipe will fill you up and leave you feeling nourished and energised.",
+        "image_path": "meal_images/samples/Chicken,_Onion_and_Sun-Dried_Tomato_Stew.jpg",
+        "ingredients": [
+            {
+                "name": "Onion",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Green Beans",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Diced Chicken Breast",
+                "unit": "grams",
+                "amount": "300"
+            },
+            {
+                "name": "Sun-Dried Tomato Paste",
+                "unit": "grams",
+                "amount": "25"
+            },
+            {
+                "name": "Passata di Pomodoro",
+                "unit": "carton(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Red Wine Stock Paste",
+                "unit": "grams",
+                "amount": "28"
+            },
+            {
+                "name": "Chicken Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Dried Thyme",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Riced Cauliflower",
+                "unit": "grams",
+                "amount": "250"
+            },
+            {
+                "name": "Water",
+                "unit": "milliliter(s)",
+                "amount": "75"
+            },
+            {
+                "name": "Salt",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Butter",
+                "unit": "grams",
+                "amount": "20"
+            }
+        ]
+    },
+    {
+        "name": "Pesto and Greek Style Cheese Naanizza",
+        "description": "Looking for a quick and tasty midweek dinner option? Try cooking up our Pesto and Greek Style Cheese Naanizza in just 20-25 minutes for a delicious and speedy meal.",
+        "image_path": "meal_images/samples/Pesto_and_Greek_Style_Cheese_Naanizza.jpg",
+        "ingredients": [
+            {
+                "name": "Mature Cheddar Cheese",
+                "unit": "grams",
+                "amount": "60"
+            },
+            {
+                "name": "Red Onion",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Plain Naans",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Marinara Sauce",
+                "unit": "grams",
+                "amount": "120"
+            },
+            {
+                "name": "Greek Style Salad Cheese",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Fresh Pesto",
+                "unit": "grams",
+                "amount": "32"
+            },
+            {
+                "name": "Wild Rocket",
+                "unit": "grams",
+                "amount": "40"
+            },
+            {
+                "name": "Balsamic Glaze",
+                "unit": "milliliter(s)",
+                "amount": "12"
+            },
+            {
+                "name": "Sugar for the Onions",
+                "unit": "tsp",
+                "amount": "1"
+            }
+        ]
+    },
+    {
+        "name": "Fragrant Veg Noodle Stir-Fry",
+        "description": "This delicious Fragrant Veg Noodle Stir-Fry has been expertly designed by our chefs as a lighter option to help with a balanced lifestyle.\nSOURCE OF PROTEIN - Protein contributes to the maintenance of muscle mass",
+        "image_path": "meal_images/samples/Fragrant_Veg_Noodle_Stir-Fry.jpg",
+        "ingredients": [
+            {
+                "name": "Bell Pepper",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Tenderstem Broccoli",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Lime",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Salted Peanuts",
+                "unit": "grams",
+                "amount": "25"
+            },
+            {
+                "name": "Egg Noodle Nest",
+                "unit": "grams",
+                "amount": "125"
+            },
+            {
+                "name": "Sliced Mushrooms",
+                "unit": "grams",
+                "amount": "120"
+            },
+            {
+                "name": "Ginger, Garlic & Lemongrass Puree",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Soy Sauce",
+                "unit": "milliliter(s)",
+                "amount": "25"
+            },
+            {
+                "name": "Bulgogi Sauce",
+                "unit": "grams",
+                "amount": "100"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "50"
+            }
+        ]
+    },
+    {
+        "name": "Prawn and Tomato Risotto",
+        "description": "This delicious Prawn and Tomato Risotto has been expertly designed by our chefs as a lighter option to help with a balanced lifestyle.\nSOURCE OF PROTEIN - Protein contributes to the maintenance of muscle mass",
+        "image_path": "meal_images/samples/Prawn_and_Tomato_Risotto.jpg",
+        "ingredients": [
+            {
+                "name": "Leek",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Vegetable Stock Paste",
+                "unit": "grams",
+                "amount": "20"
+            },
+            {
+                "name": "Tomato Puree",
+                "unit": "grams",
+                "amount": "30"
+            },
+            {
+                "name": "Risotto Rice",
+                "unit": "grams",
+                "amount": "175"
+            },
+            {
+                "name": "Cider Vinegar",
+                "unit": "milliliter(s)",
+                "amount": "15"
+            },
+            {
+                "name": "King Prawns",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Grated Hard Italian Style Cheese",
+                "unit": "grams",
+                "amount": "20"
+            },
+            {
+                "name": "Chilli Flakes",
+                "unit": "pinch",
+                "amount": "1"
+            },
+            {
+                "name": "Water for the Stock",
+                "unit": "milliliter(s)",
+                "amount": "800"
+            }
+        ]
+    },
+    {
+        "name": "Basa Tikka Masala",
+        "description": "This Basa Tikka Masala is bursting full of flavours and makes the perfect dinner night option from HelloFresh. Cook up a fresh start!",
+        "image_path": "meal_images/samples/Basa_Tikka_Masala.jpg",
+        "ingredients": [
+            {
+                "name": "Jasmine Rice",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "White Cumin Seeds",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Basa Fillets",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Tikka Masala Paste",
+                "unit": "grams",
+                "amount": "75"
+            },
+            {
+                "name": "Tomato Puree",
+                "unit": "grams",
+                "amount": "30"
+            },
+            {
+                "name": "Creme Fraiche",
+                "unit": "grams",
+                "amount": "75"
+            },
+            {
+                "name": "Baby Spinach",
+                "unit": "grams",
+                "amount": "40"
+            },
+            {
+                "name": "Water for the Rice",
+                "unit": "milliliter(s)",
+                "amount": "300"
+            },
+            {
+                "name": "Sugar",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Water for the Curry",
+                "unit": "milliliter(s)",
+                "amount": "150"
+            },
+            {
+                "name": "Butter",
+                "unit": "grams",
+                "amount": "20"
+            }
+        ]
+    },
+    {
+        "name": "Speedy Cajun Style Chicken Macaroni",
+        "description": "Looking for a quick and tasty midweek dinner option? Try cooking up our Speedy Cajun Style Chicken Macaroni in just 20-25 minutes for a delicious and speedy meal.",
+        "image_path": "meal_images/samples/Speedy_Cajun_Style_Chicken_Macaroni.jpg",
+        "ingredients": [
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Macaroni",
+                "unit": "grams",
+                "amount": "180"
+            },
+            {
+                "name": "Diced Chicken Breast",
+                "unit": "grams",
+                "amount": "260"
+            },
+            {
+                "name": "Tomato Puree",
+                "unit": "grams",
+                "amount": "30"
+            },
+            {
+                "name": "Cajun Spice Mix",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Chicken Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Creme Fraiche",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Grated Hard Italian Style Cheese",
+                "unit": "grams",
+                "amount": "20"
+            },
+            {
+                "name": "Baby Spinach",
+                "unit": "grams",
+                "amount": "40"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "100"
+            }
+        ]
+    },
+    {
+        "name": "Roasted Salmon and Thai Green Style Curry",
+        "description": "This Roasted Salmon and Thai Green Style Curry takes inspiration from classic restaurant dishes to bring a fine dining experience straight into your home!",
+        "image_path": "meal_images/samples/Roasted_Salmon_and_Thai_Green_Style_Curry.jpg",
+        "ingredients": [
+            {
+                "name": "Tenderstem Broccoli",
+                "unit": "grams",
+                "amount": "80"
+            },
+            {
+                "name": "Pak Choi",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Lime",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Jasmine Rice",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Salmon Fillets",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Thai Green Style Paste",
+                "unit": "grams",
+                "amount": "90"
+            },
+            {
+                "name": "Coconut Milk",
+                "unit": "milliliter(s)",
+                "amount": "200"
+            },
+            {
+                "name": "Water for the Rice",
+                "unit": "milliliter(s)",
+                "amount": "300"
+            },
+            {
+                "name": "Sugar for the Sauce",
+                "unit": "tsp",
+                "amount": "1"
+            }
+        ]
+    },
+    {
+        "name": "Indonesian Style Chicken and Rice",
+        "description": "Looking for a quick and tasty midweek dinner option? Try cooking up our Indonesian Style Chicken and Rice in just 20-25 minutes for a delicious and speedy meal.",
+        "image_path": "meal_images/samples/Indonesian_Style_Chicken_and_Rice.jpg",
+        "ingredients": [
+            {
+                "name": "Basmati Rice",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Carrot",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Rice Vinegar",
+                "unit": "milliliter(s)",
+                "amount": "30"
+            },
+            {
+                "name": "Pak Choi",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Diced Chicken Breast",
+                "unit": "grams",
+                "amount": "260"
+            },
+            {
+                "name": "Ginger, Garlic & Lemongrass Puree",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Ketjap Manis",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Honey",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Salted Peanuts",
+                "unit": "grams",
+                "amount": "25"
+            },
+            {
+                "name": "Sugar for the Pickle",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "50"
+            }
+        ]
+    },
+    {
+        "name": "Sirloin Steak and Peppercorn Sauce",
+        "description": "Our 21 Day Aged Sirloin Steak and Peppercorn Sauce combines premium beef with delicious sides to bring the steakhouse to your table.",
+        "image_path": "meal_images/samples/21_Day_Aged_Sirloin_Steak_and_Peppercorn_Sauce.jpg",
+        "ingredients": [
+            {
+                "name": "Sirloin Steaks",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Potatoes",
+                "unit": "grams",
+                "amount": "450"
+            },
+            {
+                "name": "Echalion Shallot",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Green Beans",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Cracked Black Pepper",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Chicken Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Creme Fraiche",
+                "unit": "grams",
+                "amount": "75"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "100"
+            }
+        ]
+    },
+    {
+        "name": "Quick Chermoula Prawns",
+        "description": "This delicious Quick Chermoula Prawns has been expertly designed by our chefs as a lighter option to help with a balanced lifestyle.",
+        "image_path": "meal_images/samples/Quick_Chermoula_Prawns.jpg",
+        "ingredients": [
+            {
+                "name": "Vegetable Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Couscous",
+                "unit": "grams",
+                "amount": "120"
+            },
+            {
+                "name": "Courgette",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "King Prawns",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Chermoula Spice Mix",
+                "unit": "sachet(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Greek Style Salad Cheese",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Zhoug Style Paste",
+                "unit": "grams",
+                "amount": "50"
+            },
+            {
+                "name": "Water for the Couscous",
+                "unit": "milliliter(s)",
+                "amount": "240"
+            }
+        ]
+    },
+    {
+        "name": "Chipotle Sweet Potato and Black Bean Rice Bowl",
+        "description": "Looking for a quick and tasty midweek dinner option? Try cooking up our Chipotle Sweet Potato and Black Bean Rice Bowl in just 20-25 minutes for a delicious and speedy meal.",
+        "image_path": "meal_images/samples/Chipotle_Sweet_Potato_and_Black_Bean_Rice_Bowl.jpg",
+        "ingredients": [
+            {
+                "name": "Diced Sweet Potato",
+                "unit": "grams",
+                "amount": "200"
+            },
+            {
+                "name": "Basmati Rice",
+                "unit": "grams",
+                "amount": "150"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Lime",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Medium Tomato",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Black Beans",
+                "unit": "carton(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Vegetable Stock Paste",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Chipotle Paste",
+                "unit": "grams",
+                "amount": "20"
+            },
+            {
+                "name": "Tomato Passata",
+                "unit": "carton(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Mature Cheddar Cheese",
+                "unit": "grams",
+                "amount": "30"
+            },
+            {
+                "name": "Sugar for the Salsa",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Olive Oil for the Salsa",
+                "unit": "tbsp",
+                "amount": "1"
+            },
+            {
+                "name": "Honey",
+                "unit": "tbsp",
+                "amount": "1"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "50"
+            },
+            {
+                "name": "Butter",
+                "unit": "grams",
+                "amount": "20"
+            }
+        ]
+    },
+    {
+        "name": "Cheeseburger Quesadillas",
+        "description": "Looking for a quick and tasty midweek dinner option? Try cooking up our Cheeseburger Quesadillas in just 20-25 minutes for a delicious and speedy meal.",
+        "image_path": "meal_images/samples/Cheeseburger_Quesadillas.jpg",
+        "ingredients": [
+            {
+                "name": "Beef and Pork Mince",
+                "unit": "grams",
+                "amount": "240"
+            },
+            {
+                "name": "Spring Onion",
+                "unit": "unit(s)",
+                "amount": "1"
+            },
+            {
+                "name": "Garlic Clove",
+                "unit": "unit(s)",
+                "amount": "2"
+            },
+            {
+                "name": "Mature Cheddar Cheese",
+                "unit": "grams",
+                "amount": "60"
+            },
+            {
+                "name": "Dijon Mustard",
+                "unit": "grams",
+                "amount": "10"
+            },
+            {
+                "name": "Worcester Sauce",
+                "unit": "grams",
+                "amount": "15"
+            },
+            {
+                "name": "Plain Taco Tortillas",
+                "unit": "unit(s)",
+                "amount": "6"
+            },
+            {
+                "name": "Red Wine Vinegar",
+                "unit": "grams",
+                "amount": "12"
+            },
+            {
+                "name": "Wild Rocket",
+                "unit": "grams",
+                "amount": "20"
+            },
+            {
+                "name": "Burger Sauce",
+                "unit": "grams",
+                "amount": "30"
+            },
+            {
+                "name": "Tomato Ketchup",
+                "unit": "tbsp",
+                "amount": "2"
+            },
+            {
+                "name": "Water for the Sauce",
+                "unit": "milliliter(s)",
+                "amount": "50"
+            },
+            {
+                "name": "Sugar for the Dressing",
+                "unit": "tsp",
+                "amount": "1"
+            },
+            {
+                "name": "Olive Oil for the Dressing",
+                "unit": "tbsp",
+                "amount": "1"
+            }
+        ]
+    }
+]

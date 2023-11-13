@@ -2,15 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\DateFormatter;
 use Carbon\Carbon;
 use App\Models\Meal;
 use Illuminate\Http\Request;
 use App\Models\MealSelection;
+use App\Helpers\DateFormatter;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Middleware\MealSelectionsMiddleware;
 
 class MealSelections extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(MealSelectionsMiddleware::class);
+        view()->share('current_nav', 'meal_selections');
+    }
+
     public function calendar(int $year = null, int $week = null)
     {
         $events = [];
@@ -30,7 +37,7 @@ class MealSelections extends Controller
             $calendar_start = Carbon::create($year)->setISODate($year, $week)->toDateString();
         }
 
-        return view('calendar', [
+        return view('meal_selections/calendar', [
             'events' => $events,
             'calendar_start' => $calendar_start
         ]);
@@ -40,7 +47,11 @@ class MealSelections extends Controller
     {
         $meal_selection = MealSelection::findOrFail($selected_meal_id);
 
-        return view('view_selected_meal', [
+        view()->share('breadcrumbs', [
+            ['title' => 'Calendar', 'link' => route('selections.calendar', [$meal_selection->year, $meal_selection->week])],
+            ['title' => 'View meal']
+        ]);
+        return view('meal_selections/view_selected_meal', [
             'meal' => $meal_selection->meal,
             'meal_selection' => $meal_selection,
             'meal_ingredients' => $meal_selection->meal->getMealIngredients()
@@ -65,36 +76,44 @@ class MealSelections extends Controller
 
     public function editSelections(int $year, int $week)
     {
-        return view('edit_selections', [
+        view()->share('breadcrumbs', [
+            ['title' => 'Calendar', 'link' => route('selections.calendar', [$year, $week])],
+            ['title' => 'Edit meal selections']
+        ]);
+        return view('meal_selections/edit_selections', [
             'meals' => Meal::getUserMeals(),
-            'selections' => MealSelection::userWeekSelections($year, $week)->pluck('meal_id')
+            'selections' => MealSelection::userWeekSelections($year, $week)->pluck('meal_id'),
+            'year' => $year,
+            'week' => $week,
+            'heading' => DateFormatter::formatWeekRange($year, $week)
         ]);
     }
 
     public function editSelectionsAction(int $year, int $week, Request $request)
     {
-        switch ($request->submitted) {
-            case 'save_selections':
-                MealSelection::wipe($year, $week);
-                foreach ($request->meal_selections ?: [] as $selected_meal_id) {
-                    $selection = new MealSelection();
-                    $selection->year = $year;
-                    $selection->week = $week;
-                    $selection->meal_id = $selected_meal_id;
-                    $selection->user_id = Auth::user()->id;
-                    $selection->save();
-                }
-                return redirect()->route('selections.calendar', [$year, $week])->with('success', 'Meal selections saved!');
+        MealSelection::wipe($year, $week);
+        foreach ($request->meal_selections ?: [] as $selected_meal_id) {
+            $selection = new MealSelection();
+            $selection->year = $year;
+            $selection->week = $week;
+            $selection->meal_id = $selected_meal_id;
+            $selection->user_id = Auth::user()->id;
+            $selection->save();
         }
+        return redirect()->route('selections.calendar', [$year, $week])->with('success', 'Meal selections saved!');
     }
 
     public function viewCollatedIngredients(int $year, int $week)
     {
         $week_selections = MealSelection::userWeekSelections($year, $week);
-        $ingredients = $week_selections->pluck('meal.ingredients')->flatten()->unique('id');
+        $ingredients = $week_selections->pluck('meal.ingredients')->flatten()->unique('id')->sortBy('name');
         $collated_ingredients = Meal::collateIngredients($week_selections->pluck('meal'));
 
-        return view('view_collated_ingredients', [
+        view()->share('breadcrumbs', [
+            ['title' => 'Calendar', 'link' => route('selections.calendar', [$year, $week])],
+            ['title' => 'Ingredients']
+        ]);
+        return view('meal_selections/view_collated_ingredients', [
             'ingredients' => $ingredients,
             'totals' => $collated_ingredients,
             'year' => $year,

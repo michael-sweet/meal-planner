@@ -34,14 +34,17 @@ class Meal extends Model
             $user = Auth::user();
         }
 
-        return Meal::where(['user_id' => $user->id])->with('ingredients')->get();
+        return Meal::where(['user_id' => $user->id])
+            ->with('ingredients')
+            ->orderBy('name')
+            ->get();
     }
 
     public function getMealIngredients()
     {
         return $this->mealIngredients->load('ingredient')->filter(function ($meal_ingredient) {
             return $meal_ingredient->ingredient;
-        })->all();
+        })->sortBy('ingredient.name');
     }
 
     public static function collateIngredients($meals)

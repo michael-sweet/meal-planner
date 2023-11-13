@@ -11,6 +11,11 @@ let calendarEl = document.getElementById('calendar');
 if (calendarEl) {
     let calendar = new Calendar(calendarEl, {
         events: window.calendar.events,
+        eventContent: (args) => {
+            var title = document.createElement('div');
+            title.innerHTML = '<i class="fa-regular fa-eye me-2"></i>' + args.event.title;
+            return { domNodes: [ title ]};
+        },
         plugins: [luxonPlugin, listPlugin, bootstrap],
         themeSystem: 'bootstrap',
         initialView: 'listWeek',

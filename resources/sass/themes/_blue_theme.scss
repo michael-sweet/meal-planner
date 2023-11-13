@@ -3,17 +3,20 @@ $light-blue: #567995;
 $very-light-blue: #bbcedd;
 $almost-white: #eceff4;
 
-$body-bg: $almost-white;
-$body-color: $blue;
-
 $primary: $blue;
+
+$body-bg: white;
+$body-color: $blue;
+$table-color: $blue;
+$background-color: $very-light-blue;
 
 $input-bg: white;
 
-$nav-item-color: $light-blue;
+$nav-item-color: $primary;
+$navbar-light-active-color: $primary;
 $nav-border-color: $very-light-blue;
 $nav-background-color: white;
 
-$card-meal-bg: white;
-$card-meal-color: $light-blue;
-$card-shaddow: #bec8da 0px 0px 10px 0px;
+$card-meal-bg: $almost-white;
+$card-meal-color: $primary;
+$card-border-color: $very-light-blue;
