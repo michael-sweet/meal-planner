@@ -1,6 +1,4 @@
-@extends('layout_unauthed')
-
-@section('content')
+<x-layout_unauthed>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -70,4 +68,4 @@
         </div>
     </div>
 </div>
-@endsection
+</x-layout_unauthed>
