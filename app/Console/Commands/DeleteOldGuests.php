@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\Meal;
 use App\Models\User;
+use App\Models\Ingredient;
 use App\Models\MealSelection;
 use App\Models\MealIngredient;
 use Illuminate\Console\Command;
@@ -56,6 +57,7 @@ class DeleteOldGuests extends Command
         $meal_ids = Meal::whereIn('user_id', $user_ids)->pluck('id');
         MealIngredient::whereIn('meal_id', $meal_ids)->delete();
         MealSelection::whereIn('meal_id', $user_ids)->delete();
+        Ingredient::whereIn('user_id', $user_ids)->forceDelete();
         Meal::whereIn('user_id', $user_ids)->forceDelete();
         User::where('created_at', '<', now()->subDay())->forceDelete();
 
