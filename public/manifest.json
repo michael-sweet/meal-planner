@@ -1,0 +1,11 @@
+{
+    "name": "Meal Planner",
+    "icons": [
+      {
+        "src": "/img/logo.png",
+        "sizes": "750x750",
+        "type": "image/png"
+      }
+    ],
+    "display": "standalone"
+}

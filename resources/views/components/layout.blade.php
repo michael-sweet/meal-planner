@@ -13,6 +13,7 @@
         @endif
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="manifest" href="/manifest.json">
         <link href="/css/app_{{ Cookie::get('theme') ?? 'blue' }}.css" rel="stylesheet" id="theme-stylesheet">
         <title>Meal Planner</title>
         <style>
